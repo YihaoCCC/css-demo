@@ -2,19 +2,20 @@ import { createWebHashHistory, createRouter, RouteRecordRaw } from 'vue-router'
 
 const routes:RouteRecordRaw[] = [
     {
-        path: "/",
-        redirect: 'home/dashbord',
-    },
-    {
-        path: '/home',
+        path: '/',
         name: 'home',
         component: () => import('../views/home/home.vue'),
-        redirect: '/home/dashbord',
+        redirect: '/dashbord',
         children: [
             {
-                path: '/home/dashbord',
+                path: 'dashbord',
                 name: 'dashbord',
                 component: () => import('../views/dashbord/dashbord.vue')
+            },
+            {
+                path: 'mouseCard',
+                name: 'mouseCard',
+                component: () => import('../views/mouseCard/mouseCard.vue')
             }
         ]
     }
