@@ -16,6 +16,11 @@ const routes:RouteRecordRaw[] = [
                 path: 'mouseCard',
                 name: 'mouseCard',
                 component: () => import('../views/mouseCard/mouseCard.vue')
+            },
+            {
+                path :'/loading',
+                name: 'loading',
+                component: () => import('../views/loading/loading.vue')
             }
         ]
     }

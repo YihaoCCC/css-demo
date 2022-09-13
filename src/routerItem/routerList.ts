@@ -6,5 +6,9 @@ export const routeList = [
     {   
         path: '/mouseCard',
         name: '鼠标进入卡片'
+    },
+    {
+        path: '/loading',
+        name: '我的loading'
     }
 ]

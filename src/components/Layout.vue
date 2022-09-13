@@ -95,12 +95,22 @@ const closeLeftBar = () => {
     }
     .rightContent {
         width: 100%;
-        height: 91.5vh;
-        border-radius: 10px;
-        
+        height: 91vh;
+        border-radius: 10px;   
         padding-right: 20px;
         padding: 10px 16px;
         box-sizing: border-box;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        background-color: rgba(71,71,71, 0.063);
+        box-shadow: rgba(150, 150, 150, 0.3) 0px 0px 30px;
+        border: 2px rgba(255,255,255,0.4) solid;
+        overflow: hidden;
     }
 }
 </style>
