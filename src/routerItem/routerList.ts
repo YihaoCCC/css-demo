@@ -10,5 +10,9 @@ export const routeList = [
     {
         path: '/loading',
         name: '我的loading'
+    },
+    {
+        path: '/piano',
+        name: '手风琴卡片'
     }
 ]

@@ -21,6 +21,11 @@ const routes:RouteRecordRaw[] = [
                 path :'/loading',
                 name: 'loading',
                 component: () => import('../views/loading/loading.vue')
+            },
+            {
+                path: '/piano',
+                name: 'piano',
+                component: () => import('../views/piano/piano.vue')
             }
         ]
     }

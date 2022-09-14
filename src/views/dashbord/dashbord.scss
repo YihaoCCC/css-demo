@@ -1,0 +1,79 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+}
+
+
+$inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2), 
+inset -.2rem -.2rem .5rem var(--white);
+
+
+.components {
+    width: 75rem;
+    height: 40rem;
+    border-radius: 3rem;
+    background-color: #e4ebf5;
+    box-shadow:.8rem .8rem 1.4rem #c8d0e7, 
+              -.2rem -.2rem 1.8rem #fff;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 17.6rem 19rem 20.4rem;
+    grid-template-rows: repeat(autofit, min-content);
+    grid-column-gap: 5rem;
+    grid-row-gap: 2.5rem;
+    align-items: center;
+    .switch {
+        width: 6rem;
+        input {
+            display: none;
+            &:checked {
+                & ~ label {
+                    &::before { opacity: 1; }
+                    &::after {
+                        left: 57%; 
+                        background: #E4EBF5;
+                    }
+                }
+            }
+        }
+        label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 3rem;
+            box-shadow: .3rem .3rem .6rem #c8d0e7, 
+                        -.2rem -.2rem .5rem #fff;
+            background: rgba(255,255,255,0);
+            position: relative;
+            cursor: pointer;
+            border-radius: 1.6rem;
+            &::after {
+                content: "";
+                position: absolute;
+                left: .4rem;
+                width: 2.1rem;
+                height: 2.1rem;
+                border-radius: 50%;
+                background: #9baacf;
+                transition: all .4s ease;
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(330deg, #5b0eeb 0%, #6d5dfc 50%, #8abdff 100%);
+                opacity: 0;
+                transition: all .4s ease;
+            }
+        }
+        
+    }
+}
