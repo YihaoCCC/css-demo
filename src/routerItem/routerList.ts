@@ -1,6 +1,6 @@
 export const routeList = [
     {
-        path: '/',
+        path: '/dashbord',
         name: '主页'
     },
     {   
@@ -9,7 +9,17 @@ export const routeList = [
     },
     {
         path: '/loading',
-        name: '我的loading'
+        name: '我的loading',
+        clildren: [
+            {
+                path: '/loading/loading1',
+                name: "loading1",
+            },
+            {
+                path: '/loading/loading2',
+                name: 'loading2'
+            }
+        ]
     },
     {
         path: '/piano',

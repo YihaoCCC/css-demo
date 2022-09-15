@@ -20,7 +20,19 @@ const routes:RouteRecordRaw[] = [
             {
                 path :'/loading',
                 name: 'loading',
-                component: () => import('../views/loading/loading.vue')
+                redirect: '/loading/loading1',
+                children: [
+                    {
+                        path: "loading1",
+                        name: 'loading1',
+                        component: () => import('../views/loading/loading-one/loading.vue')
+                    },
+                    {
+                        path: "loading2",
+                        name: 'loading2',
+                        component: () => import('../views/loading/loading-two/loading.vue')
+                    }
+                ]
             },
             {
                 path: '/piano',
