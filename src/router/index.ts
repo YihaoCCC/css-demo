@@ -30,7 +30,7 @@ const routes:RouteRecordRaw[] = [
                     {
                         path: "loading2",
                         name: 'loading2',
-                        component: () => import('../views/loading/loading-two/loading.vue')
+                        component: () => import('../views/loading/loading-two/loading2.vue')
                     }
                 ]
             },
