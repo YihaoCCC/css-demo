@@ -29,6 +29,7 @@ html,body {
   padding: 0;
   background-color: #18181b;
   cursor: url('./assets/default.cur'), auto;
+  height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
