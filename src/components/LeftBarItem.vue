@@ -13,7 +13,7 @@
             <div class="routeItem">
                 {{item.name}}
             </div>
-            <div class="down" v-if="item.clildren?.length">
+            <div class="down" v-if="item.children?.length">
                 <svg t="1663220731909" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="3635" width="14" height="14">
                     <path
@@ -22,8 +22,8 @@
                 </svg>
             </div>
         </div>
-        <div class="children" v-if="item.clildren?.length">
-            <div class="clildrenItem" v-for="citem in item.clildren" @click="goPage(citem.path)" :class="citem.path === currentPath ? 'active' : ''">
+        <div class="children" v-if="item.children?.length">
+            <div class="childrenItem" v-for="citem in item.children" @click="goPage(citem.path)" :class="citem.path === currentPath ? 'active' : ''">
                 {{citem.name}}
             </div>
         </div>
@@ -107,7 +107,7 @@ watch(() => route.fullPath, (val) => {
         height: 0;
         opacity: 0;
         transition: all 0.3s ease-in-out;
-        .clildrenItem {
+        .childrenItem {
             height: 40px;           
             display: flex;
             align-items: center;
@@ -121,7 +121,7 @@ watch(() => route.fullPath, (val) => {
                 transition:  all .3s ease-in-out;
             }
         }
-        .clildrenItem.active {
+        .childrenItem.active {
             color: #fff;
             &::before {
                 background-color: #fff;

@@ -10,7 +10,7 @@ export const routeList = [
     {
         path: '/loading',
         name: '我的loading',
-        clildren: [
+        children: [
             {
                 path: '/loading/loading1',
                 name: "loading1",
@@ -24,5 +24,19 @@ export const routeList = [
     {
         path: '/piano',
         name: '手风琴卡片'
+    },
+    {
+        path :'/input',
+        name : '文本输入框',
+        children: [
+            {
+                path: '/input/input1',
+                name : 'input1',
+            },
+            {
+                path: '/input/input2',
+                name: 'input2'
+            }
+        ]
     }
 ]

@@ -38,8 +38,25 @@ const routes:RouteRecordRaw[] = [
                 path: '/piano',
                 name: 'piano',
                 component: () => import('../views/piano/piano.vue')
+            },
+            {
+                path: 'input',
+                name: 'input',
+                redirect: '/input/input1',
+                children: [
+                    {
+                        path: 'input1',
+                        name: 'input1',
+                        component: () => import('../views/input/input-one/input1.vue')
+                    }
+                ]
             }
         ]
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        component: () => import('../views/404/404.vue')
     }
 ]
 
