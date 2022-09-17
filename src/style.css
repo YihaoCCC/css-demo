@@ -16,25 +16,35 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --color-layout-font: #71717a;
+  --main-color:#c026d3;
+  --theme-background: #18181b;
+  --theme-font-color: #71717a;
+  --theme-icon-color: #71717a;
+  --theme-font-deeper: #fff;
+  --theme-rightContent-color: #1a1a1d;
+  --theme-rightContent-boxShadow: rgba(150, 150, 150, 0.3) 0px 0px 30px;
+  --theme-rightContent-border: 2px rgba(255,255,255,0.4) solid;
+  --theme-active-color: #fff;
   --color-active-background: #c026d3;
-  --root-background-dark: #242424;
-  --root-background-light: #fff;
   --root-light-color: #213547;
   --root-dark-color: #666;
+}
+:root[data-theme=light] {
+  --theme-background: #fff;
+  --theme-font-color: #222629;
+  --theme-font-deeper: #18181b;
+  --theme-icon-color: rgb(186, 186, 186);
+  --theme-active-color: rgb(53, 52, 52);
+  --theme-rightContent-color: #f8f8f8;
+  --theme-rightContent-boxShadow: rgba(114, 114, 114, 0.603) 0px 0px 30px;
+  --theme-rightContent-border: 2px rgba(127, 127, 127, 0.384) solid;
 }
 
 html,body {
   margin: 0;
   padding: 0;
-  background-color: #18181b;
+  background-color: var(--theme-background);
   cursor: url('./assets/default.cur'), auto;
   height: 100vh;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--root-dark-color);
-    background-color: var(--root-background-light);
-  }
-}

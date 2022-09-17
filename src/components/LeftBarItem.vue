@@ -59,7 +59,6 @@ watch(() => route.fullPath, (val) => {
 <style lang="scss" scoped>
 .layItem {
     margin: 20px;
-    color: var(--color-layout-font);
     position: relative;
 
     .itemBox {
@@ -67,7 +66,7 @@ watch(() => route.fullPath, (val) => {
         align-items: center;
         justify-content: flex-start;
         font-size: 14px;
-    font-size: 14px;    
+        font-size: 14px;    
         font-size: 14px;
         transition: all .3s ease-in;
 
@@ -86,6 +85,9 @@ watch(() => route.fullPath, (val) => {
             svg {
                 width: 60%;
                 height: 60%;
+                path {
+                    fill: var(--theme-icon-color);
+                }
             }
         }
 
@@ -122,23 +124,24 @@ watch(() => route.fullPath, (val) => {
             }
         }
         .childrenItem.active {
-            color: #fff;
+            color: var( --theme-active-color);
+            font-weight: bolder;
             &::before {
-                background-color: #fff;
+                background-color: var( --theme-active-color);
             }
         }
     }
 
     &.active {
         .itemBox {
-            color: #fff;
+            color: var(--theme-font-deeper);
             font-weight: bolder;
             transform: scale(1.1) translateX(5px);
 
             //box-shadow: 0px 10px 40px rgba(255,0,0,);
             //background-color: none;
             .iconBox {
-                background-color: #c026d3;
+                background-color: var(--main-color);
 
                 svg {
                     path {
@@ -152,7 +155,7 @@ watch(() => route.fullPath, (val) => {
 
                 svg {
                     path {
-                        fill: #fff;
+                        fill: var(--main-color);
                     }
                 }
             }

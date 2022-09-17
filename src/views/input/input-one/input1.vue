@@ -1,10 +1,10 @@
 <template>
-    <div style="width: 100%;height:100%;background-color:#fff;padding:100px">
+        <p>tip: label背景、input背景、盒元素背景三者要保持一致</p>
         <div class="input">
             <input type="text" id="myinput" required>
             <label for="myinput">placeholder</label>
         </div>
-    </div>
+    
 </template>
 
 <style lang="scss" scoped>

@@ -38,5 +38,9 @@ export const routeList = [
                 name: 'input2'
             }
         ]
+    },
+    {
+        path: '/404page',
+        name: '404页面'
     }
 ]

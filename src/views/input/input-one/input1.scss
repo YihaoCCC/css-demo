@@ -11,8 +11,9 @@
         box-sizing: border-box;
         transition: all .3s ease;
         padding-left: 10px;
+        background-color: var(--theme-rightContent-color);
         &:focus, &:valid {
-            border: 2px solid rgb(71, 138, 221);
+            border: 2px solid var(--main-color);
             & ~ label {
                 transform: translateY(-20px) translateX(-5px);
                 font-size: 12px;
@@ -30,6 +31,6 @@
         padding: 0 3px;
         box-sizing: border-box;
         transition: all .3s ease-in-out;
-        background-color: #fff;
+        background-color: var(--theme-rightContent-color);
     }
 }
