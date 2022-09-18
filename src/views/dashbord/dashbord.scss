@@ -61,7 +61,7 @@ inset -.2rem -.2rem .5rem var(--white);
                 width: 2.1rem;
                 height: 2.1rem;
                 border-radius: 50%;
-                background: #9baacf;
+                background: var(--main-color);
                 transition: all .4s ease;
             }
             &::before {
