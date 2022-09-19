@@ -41,7 +41,7 @@ const goPage = (path: string) => {
     router.push(path)
 }
 const isShowActive = computed(() => {
-    return function (itemPath:any) {
+    return function (itemPath:string) {
         if(route.fullPath.indexOf(itemPath) !== -1)  {
             return true
         } else {

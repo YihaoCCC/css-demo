@@ -1,7 +1,7 @@
 <template>
     <div class="notfound">   
         <img src="../../assets/404.svg" alt="">
-        <button @click="goDashbord">
+        <button class="my-fly-button" @click="goDashbord">
             <div class="svg-wrapper-1">
               <div class="svg-wrapper">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -19,7 +19,7 @@
     import { useRouter } from 'vue-router';
     const router = useRouter()
     const goDashbord = () => {
-        router.push('/')
+        router.push('/home')
     }
 </script>
 

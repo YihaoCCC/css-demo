@@ -46,5 +46,12 @@ html,body {
   background-color: var(--theme-background);
   cursor: url('./assets/default.cur'), auto;
   height: 100vh;
+  scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
