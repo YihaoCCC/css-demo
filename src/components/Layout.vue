@@ -2,7 +2,7 @@
   <div class="layout">
 
     <div class="leftBar">
-      <div class="leftHeader">
+      <div class="leftHeader" @click="goDoor">
         <div class="logo">
           C
         </div>
@@ -29,6 +29,13 @@
 <script lang="ts" setup>
 import LeftBarItem from './LeftBarItem.vue';
 import Header from './Header.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const goDoor = () => {
+  router.push('/')
+}
 
 </script>
 

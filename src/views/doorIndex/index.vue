@@ -2,19 +2,28 @@
     <div class="door">
         <div class="fixContent">
             <div class="welcome">
-                <span>W</span>
-                <span>E</span>
-                <span>L</span>
-                <span>C</span>
-                <span>O</span>
-                <span>M</span>
-                <span>E</span>
+                <span style="--mystyle:1">W</span>
+                <span style="--mystyle:2">E</span>
+                <span style="--mystyle:3">L</span>
+                <span style="--mystyle:4">C</span>
+                <span style="--mystyle:5">O</span>
+                <span style="--mystyle:6">M</span>
+                <span style="--mystyle:7">E</span>
             </div>
-            <div class="footer">
-                往下滑动
+            <div class="info">
+                欢迎来到Css知识星球【嗅山海，激浪苍穹，功成至无边】
+            </div>
+            <div class="footer" @click="addClass">
+                <div class="enter" >
+                    enter
+                </div>
+                <div class="arrow arrow-1"></div>
+
+                <div class="arrow arrow-2" ></div>
+                <div class="arrow arrow-3" ></div>
             </div>
         </div>
-        <div class="secondFloor">
+        <div class="secondFloor" :class="showSecondFloor ?'show' : '' ">
             <div>
                 <button class="my-fly-button" @click="goHome">
                     <div class="svg-wrapper-1">
@@ -35,11 +44,17 @@
 
 <script lang="ts" setup>
     import { useRouter } from "vue-router";
-
+    import { ref } from "vue";
     const router = useRouter()
     
+    const showSecondFloor = ref(false)
+
     const goHome = () => {
         router.push('/home')
+    }
+
+    const addClass = () => {
+        showSecondFloor.value = true
     }
 </script>
 
