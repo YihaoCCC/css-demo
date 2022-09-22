@@ -34,12 +34,12 @@
         .info {
             margin-top: 200px;
             color: white;
+            width: 50em;
             font-size: 1.6em;
-            width: 26em;
             height: 1.2em;
             line-height: 1.2em;
             border-right: 1px solid transparent;
-            animation: typing 2s steps(42, end), blink-caret .75s step-end infinite;
+            animation: typing 4s steps(42), blink-caret .75s step-end infinite;
             font-family: Consolas, Monaco;
             word-break: break-all;
             overflow: hidden;
@@ -176,7 +176,7 @@
     }
 
     to {
-        width: 21em;
+        width: 50em;
     }
 }
 
