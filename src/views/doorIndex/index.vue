@@ -11,7 +11,7 @@
                 <span style="--mystyle:7">E</span>
             </div>
             <div class="info">
-                欢迎来到Css知识星球【嗅山海，激浪苍穹，功成至无边】
+                Welcome to Css knowledge planet [smell mountain sea, mountain wave sky, work to infinity]
             </div>
             <div class="footer" @click="addClass">
                 <div class="enter" >
@@ -34,11 +34,10 @@
                         </svg>
                       </div>
                     </div>
-                    <span>Go Home</span>
+                    <span>Dashbord</span>
                   </button>
             </div>
         </div>
-        
     </div>
 </template>
 
