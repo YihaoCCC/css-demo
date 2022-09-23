@@ -5,12 +5,15 @@
     <div class="content">
       <div class="watermark">
         <div class="main-color item">
-          <span style="margin-right: 10px;">主题色</span>
+          <span style="margin-right: 10px;">更换主题色</span>
           <input ref="colorInput" :value="defaultColor" @change="changeColor" type="color" name="color" id="color"/>
         </div>
         <div class="discription item">
-          本项目除部分图标引用来自网络外，所有组件均为个人封装。
-          开源的目的仅为了寻找更多的爱好者一起来完善这个样式库。
+          本项目除部分图标引用来自网络外，所有组件样式均为个人封装。
+          上线的目的仅为了寻找更多的爱好者一起来完善这个样式库 | 2022-09
+        </div>
+        <div class="discription item">
+          © AllCopyRight YihaoCCC
         </div>
       </div>
     </div>
