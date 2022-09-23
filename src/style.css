@@ -49,6 +49,7 @@ html,body {
   scrollbar-width: none;
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: Comic Sans MS, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
     
 }
 body::-webkit-scrollbar {
