@@ -60,6 +60,19 @@ export const routes:RouteRecordRaw[] = [
                         component: () => import('../views/input/input-two/input2.vue')
                     }
                 ]
+            },
+            {
+                path: 'list',
+                name: 'list',
+                redirect: '/home/list/userlist',
+                children: [
+                    {
+                        path: 'userlist',
+                        name: 'userlist',
+                        component: () => import('../views/List/userlist/user.vue')
+                    }
+                ]
+
             }
         ]
     },

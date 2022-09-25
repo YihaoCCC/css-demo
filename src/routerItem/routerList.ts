@@ -40,6 +40,16 @@ export const routeList:Array<myRouterItem> = [
         ]
     },
     {
+        path: '/home/list',
+        name: '列表介绍',
+        children: [
+            {
+                path: '/home/list/userlist',
+                name : '人物列表',
+            }
+        ]
+    },
+    {
         path: '/home/404page',
         name: '404页面'
     }
