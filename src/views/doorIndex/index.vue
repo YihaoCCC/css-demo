@@ -43,7 +43,7 @@
 
 <script lang="ts" setup>
     import { useRouter } from "vue-router";
-    import { ref } from "vue";
+    import { ref, onMounted, onUnmounted } from "vue";
     const router = useRouter()
     
     const showSecondFloor = ref(false)
@@ -55,6 +55,13 @@
     const addClass = () => {
         showSecondFloor.value = true
     }
+    const body = window.document.getElementsByTagName('body')[0]
+    onMounted(() => {
+        body.style.overflow = 'hidden'
+    })
+    onUnmounted(() => {
+        body.style.overflow = 'auto'
+    })
 </script>
 
 <style lang="scss" scoped>

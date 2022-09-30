@@ -9,7 +9,7 @@ export const routeList:Array<myRouterItem> = [
     },
     {
         path: '/home/loading',
-        name: '我的loading',
+        name: 'loading动画',
         children: [
             {
                 path: '/home/loading/loading1',
