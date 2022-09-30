@@ -1,8 +1,10 @@
 <template>
-        <p>tip: label背景、input背景、盒元素背景三者要保持一致</p>
-        <div class="input">
-            <input type="text" id="myinput" required>
-            <label for="myinput">placeholder</label>
+        <div>
+            <p>tip: label背景、input背景、盒元素背景三者要保持一致</p>
+            <div class="input">
+                <input type="text" id="myinput" required>
+                <label for="myinput">placeholder</label>
+            </div>
         </div>
     
 </template>

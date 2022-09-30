@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --main-color:#c026d3;
+  --main-color:#e22329;
   --theme-background: #18181b;
   --theme-font-color: #71717a;
   --theme-icon-color: #71717a;
@@ -25,7 +25,7 @@
   --theme-rightContent-boxShadow: rgba(150, 150, 150, 0.3) 0px 0px 30px;
   --theme-rightContent-border: 2px rgba(255,255,255,0.4) solid;
   --theme-active-color: #fff;
-  --color-active-background: #c026d3;
+  --color-active-background: #b01f24;
   --root-light-color: #213547;
   --root-dark-color: #666;
 }
@@ -36,8 +36,8 @@
   --theme-icon-color: rgb(186, 186, 186);
   --theme-active-color: rgb(53, 52, 52);
   --theme-rightContent-color: #f8f8f8;
-  --theme-rightContent-boxShadow: rgba(114, 114, 114, 0.603) 0px 0px 30px;
-  --theme-rightContent-border: 2px rgba(127, 127, 127, 0.384) solid;
+  --theme-rightContent-boxShadow: rgba(114, 114, 114, 0.26) 0px 0px 30px;
+  --theme-rightContent-border: 2px rgba(127, 127, 127, 0.118) solid;
 }
 
 html,body {
