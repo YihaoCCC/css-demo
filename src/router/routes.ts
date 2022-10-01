@@ -73,6 +73,18 @@ export const routes:RouteRecordRaw[] = [
                     }
                 ]
 
+            },
+            {
+                path: 'intersting',
+                name: 'intersting',
+                redirect: '/home/intersting/testpeople',
+                children: [
+                    {
+                        path: 'testpeople',
+                        name: 'testpeople',
+                        component: () => import('../views/interested/textPeople/testPeople.vue')
+                    }
+                ]
             }
         ]
     },

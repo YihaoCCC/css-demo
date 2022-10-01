@@ -1,0 +1,19 @@
+.testContent {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    p {
+        height: 100%;
+        width: 100%;
+        color: var(--main-color);
+        line-height: 14px;
+        font-size: 14px;
+        margin: 0 auto;
+        background: url('../../../img/风景图.jpg') no-repeat;
+        background-position: center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: grayscale(1);
+    }
+}
