@@ -53,6 +53,36 @@ export const routes:RouteRecordRaw[] = [
                         path: 'input1',
                         name: 'input1',
                         component: () => import('../views/input/input-one/input1.vue')
+                    },
+                    {
+                        path: 'input2',
+                        name: 'input2',
+                        component: () => import('../views/input/input-two/input2.vue')
+                    }
+                ]
+            },
+            {
+                path: 'list',
+                name: 'list',
+                redirect: '/home/list/userlist',
+                children: [
+                    {
+                        path: 'userlist',
+                        name: 'userlist',
+                        component: () => import('../views/List/userlist/user.vue')
+                    }
+                ]
+
+            },
+            {
+                path: 'intersting',
+                name: 'intersting',
+                redirect: '/home/intersting/testpeople',
+                children: [
+                    {
+                        path: 'testpeople',
+                        name: 'testpeople',
+                        component: () => import('../views/interested/textPeople/testPeople.vue')
                     }
                 ]
             }
