@@ -1,5 +1,9 @@
 <template>
     <div class="header">
+        <div class="place">        
+            <a target="_blank" :class="showChina ? 'active' : '' " href="http://121.4.104.155/#/">中国站</a>
+            <a target="_blank" :class="!showChina ? 'active' : '' " href="https://css-demo-yihaoccc.vercel.app/">mei国站</a>            
+        </div>
         <div class="theme headerItem">
             <div class="toggleWrapper">
                 <input @change="changeTheme" v-model="theme" type="checkbox" class="dn" id="dn">
@@ -58,7 +62,7 @@
 
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref,onMounted } from 'vue';
 const theme = ref(false)
 
 const changeTheme = () => {
@@ -68,7 +72,16 @@ const changeTheme = () => {
     doc.dataset.theme = themeColor
     console.log(theme.value);
 }
-
+const showChina = ref(false)
+onMounted(() => {
+    const url = window.location.href
+    if(url.indexOf('http://121.4.104.155/#/')!== -1 || url.indexOf('localhost'))  {
+        console.log("中国站");
+        showChina.value = true
+    } else {
+        showChina.value = false
+    }
+})
 const isCloseBar = ref(false)
 const closeLeftBar = () => {
     isCloseBar.value = !isCloseBar.value
@@ -94,7 +107,18 @@ const GoYuQue = () => {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
+    .place {
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: var(--theme-font-color);
+            text-decoration: none;
+        }
+        .active {
+            color: var(--theme-font-deeper);
+        }
+    }
     .color {
         color: var(--theme-font-deeper);
     }
