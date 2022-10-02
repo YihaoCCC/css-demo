@@ -18,9 +18,35 @@
               </router-view>
           </template>
       </Layout>
+      <div class="openDoor">
+
+      </div>
     </template>
     
     <style scoped>
+    .openDoor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 100;
+      background-color: var(--theme-background);
+      animation: close 1s ease-in-out forwards;
+      animation-delay: .3s;
+    }
     
+  @keyframes close {
+    0% {
+        opacity: 1;
+        background-color: var(--theme-background);
+        clip-path: circle(100%);      
+    }
+    100% {
+        opacity: 0;
+        background-color: rgb(183, 183, 183);
+        clip-path: circle(0% at 50% 50%);
+    }
+  }
     </style>
     
