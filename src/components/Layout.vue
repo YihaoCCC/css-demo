@@ -6,7 +6,7 @@
         <div class="logo">
           C
         </div>
-        <span>CYH CMS</span>
+        <span>Million UI</span>
       </div>
       <LeftBarItem></LeftBarItem>
     </div>
