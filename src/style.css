@@ -35,7 +35,7 @@
   --theme-font-deeper: #18181b;
   --theme-icon-color: rgb(186, 186, 186);
   --theme-active-color: rgb(53, 52, 52);
-  --theme-rightContent-color: #f8f8f8;
+  --theme-rightContent-color: #fff;
   --theme-rightContent-boxShadow: rgba(114, 114, 114, 0.26) 0px 0px 30px;
   --theme-rightContent-border: 2px rgba(127, 127, 127, 0.118) solid;
 }

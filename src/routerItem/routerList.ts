@@ -63,6 +63,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/intersting/testpeople',
                 name: '文字渲染图片'
+            },
+            {
+                path: '/home/intersting/yourname',
+                name: '手写签名'
             }
         ]
     },

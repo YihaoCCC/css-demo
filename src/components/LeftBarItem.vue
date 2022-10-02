@@ -171,9 +171,19 @@ watch(() => route.fullPath, (val) => {
     }
 }
 </style>
-<style scoped>
-     .layItem .itemBox /deep/ .iconBox svg {
+<style scoped lang="scss">
+     .layItem .itemBox :deep(.iconBox svg)  {
         width: 66%;
-        height: 100%;
+        height: 100%;          
+    }
+    .layItem {
+        .itemBox :deep(.iconBox svg path) {
+            fill: var(--theme-icon-color);
+        }
+        &.active {
+            .itemBox :deep(.iconBox svg path) {
+                fill: #fff
+            }
+        }
     }
 </style>

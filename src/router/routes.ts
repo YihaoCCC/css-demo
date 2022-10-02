@@ -83,6 +83,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'testpeople',
                         name: 'testpeople',
                         component: () => import('../views/interested/textPeople/testPeople.vue')
+                    },
+                    {
+                        path: 'yourname',
+                        name: 'yourname',
+                        component: () => import('../views/interested/yourName/yourName.vue')
                     }
                 ]
             }
