@@ -75,7 +75,7 @@ const changeTheme = () => {
 const showChina = ref(false)
 onMounted(() => {
     const url = window.location.href
-    if(url.indexOf('http://121.4.104.155/#/')!== -1 || url.indexOf('localhost'))  {
+    if(url.indexOf('http://121.4.104.155/#/')!== -1)  {
         console.log("中国站");
         showChina.value = true
     } else {
