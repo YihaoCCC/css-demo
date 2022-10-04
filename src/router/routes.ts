@@ -88,6 +88,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'yourname',
                         name: 'yourname',
                         component: () => import('../views/interested/yourName/yourName.vue')
+                    },
+                    {
+                        path: 'textBackImg',
+                        name: 'textBackImg',
+                        component: () => import('../views/interested/text/textBackImg.vue')
                     }
                 ]
             }
