@@ -7,7 +7,7 @@ export const routeList:Array<myRouterItem> = [
     {   
         path: '/home/mouseCard',
         icon: 'Promotion',
-        name: '鼠标进入卡片'
+        name: '卡片蒙版'
     },
     {
         path: '/home/loading',
@@ -27,12 +27,12 @@ export const routeList:Array<myRouterItem> = [
     {
         path: '/home/piano',
         icon: 'List',
-        name: '手风琴卡片'
+        name: 'card手风琴'
     },
     {
         path:'/home/input',
         icon: 'EditPen',
-        name : '文本输入框',
+        name : 'input文本',
         children: [
             {
                 path: '/home/input/input1',
@@ -47,7 +47,7 @@ export const routeList:Array<myRouterItem> = [
     {
         path: '/home/list',
         icon: 'Avatar',
-        name: '列表介绍',
+        name: 'list介绍',
         children: [
             {
                 path: '/home/list/userlist',
@@ -62,7 +62,7 @@ export const routeList:Array<myRouterItem> = [
         children: [
             {
                 path: '/home/intersting/testpeople',
-                name: '文字渲染图片'
+                name: 'text图片'
             },
             {
                 path: '/home/intersting/yourname',
