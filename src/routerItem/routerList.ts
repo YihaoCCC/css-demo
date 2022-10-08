@@ -71,6 +71,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/intersting/textBackImg',
                 name: '文字背景运动'
+            },
+            {
+                path: '/home/intersting/iphone14',
+                name: '灵动岛'
             }
         ]
     },
