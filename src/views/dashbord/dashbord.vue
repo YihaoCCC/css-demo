@@ -24,11 +24,10 @@
               <p>Tab 3</p></label>
             
             <div class="segmented-control__color"></div>
-          </div>
-    </div>
+        </div>
+  </div>
 </template>
 <script lang="ts" setup>
-
 
 </script>
 <style lang="scss" scoped>
