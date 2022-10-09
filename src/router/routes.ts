@@ -93,6 +93,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'textBackImg',
                         name: 'textBackImg',
                         component: () => import('../views/interested/text/textBackImg.vue')
+                    },
+                    {
+                        path: 'iphone14',
+                        name: 'iphone14',
+                        component: () => import('../views/interested/iphone14/iphone14.vue')
                     }
                 ]
             }

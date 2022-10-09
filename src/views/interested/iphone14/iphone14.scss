@@ -1,0 +1,92 @@
+.iphoneContent {
+    width: 60%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 3rem;
+    .iphone14 {
+        width: 20rem;
+        height: 38rem;
+        border-radius: 30px;
+        margin: auto;
+        border: 10px solid #333;
+        padding-top: .8rem;
+        .dynamic {
+            width: 7rem;
+            margin:0 auto 200px auto;
+            height: 1.6rem;
+            border-radius: 20px;
+            background-color: #333;
+            position: relative;
+            .children {
+                position: absolute;
+                top: 0;
+                right: 1rem;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-color: #333;
+                border-radius: 20px;
+                transition: all .6s;
+            }
+            .change1 {
+                animation: change1 .6s ease-in-out forwards;
+            }
+            .reverse {
+                animation: change1 .6s ease-in-out reverse;
+            }
+        }
+        .change2 {
+            animation: change2 .6s ease-in-out forwards;
+        }
+        .change3 {
+            animation: change3 1s ease-in-out forwards;
+        }
+        .change4 {
+            animation: change4 .6s ease-in-out forwards;
+        }
+        button {
+            margin: auto;
+        }
+    }
+}
+@keyframes change1 {
+    0% {
+        width: 2rem;
+        right: 1rem;
+    }
+    100% {
+        width: 1.6rem;
+        right: -2rem;
+    }
+}
+
+@keyframes change2 {
+    to {
+        width: 12rem;
+    }
+}
+
+@keyframes change3 {
+    from {
+        width: 12rem;
+    }
+    
+    to {
+        width: 18rem;
+        height: 10rem;
+        border-radius: 30px;
+    }
+}
+
+@keyframes change4 {
+    from {
+        width: 18rem;
+        height: 10rem;
+        border-radius: 30px;
+    }
+    to {
+        width: 18rem;
+        height: 5rem;
+        border-radius: 30px;
+    }
+}
