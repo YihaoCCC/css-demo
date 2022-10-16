@@ -1,4 +1,4 @@
-import { createWebHashHistory, createRouter, RouteRecordRaw } from 'vue-router'
+import { createWebHashHistory, createRouter } from 'vue-router'
 import { routes } from './routes'
 
 
