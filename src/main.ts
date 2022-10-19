@@ -6,6 +6,7 @@ import router from './router/index'
 import 'animate.css'
 import { useElementIcons } from './plugins/element-icon'
 const app = createApp(App)
+app.config.globalProperties.$showModal = false
 useElementIcons(app)
 app.use(router)
 app.mount('#app')

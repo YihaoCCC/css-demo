@@ -25,9 +25,13 @@
             
             <div class="segmented-control__color"></div>
         </div>
+        <YhModal>
+
+        </YhModal>
   </div>
 </template>
 <script lang="ts" setup>
+import YhModal from '../../components/YhModal.vue';
 
 </script>
 <style lang="scss" scoped>
