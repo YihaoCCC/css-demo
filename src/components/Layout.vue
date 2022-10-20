@@ -17,7 +17,7 @@
       <div style="padding: 0 16px 10px 16px;box-sizing:border-box;">
         <div class="rightContent">
           <slot name="layout-container"></slot>
-          <button class="showCode"  @click="showModal">
+          <button class="showCode" v-if="useCodeButton.showCodeButton"  @click="showModal">
             <svg t="1666181730854" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
               p-id="2757" width="26" height="26">
               <path
@@ -39,20 +39,25 @@
 import LeftBarItem from './LeftBarItem.vue';
 import Header from './Header.vue';
 import { useRouter } from 'vue-router';
-import { getCurrentInstance } from 'vue'
-const instance = getCurrentInstance()
-let ishow = instance?.appContext.config.globalProperties.$showModal
-
+// import { getCurrentInstance } from 'vue'
+// const instance = getCurrentInstance()
+// let ishow = instance?.appContext.config.globalProperties.$showModal
+import { useModalStore, useCodeButtonStore }  from '../store/index'
 const router = useRouter()
 
+const useModal = useModalStore()
+const useCodeButton = useCodeButtonStore()
 const goDoor = () => {
   router.push('/')
 }
 const showModal = () => {
-  instance!.appContext.config.globalProperties.$showModal = !instance!.appContext.config.globalProperties.$showModal
-  console.log(instance?.appContext.config.globalProperties.$showModal);
+  useModal.openModal()
+} 
+// const showModal = () => {
+//   instance!.appContext.config.globalProperties.$showModal = !instance!.appContext.config.globalProperties.$showModal
+//   console.log(instance?.appContext.config.globalProperties.$showModal);
   
-}
+// }
 
 </script>
 

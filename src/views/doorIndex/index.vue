@@ -44,10 +44,11 @@
 <script lang="ts" setup>
     import { useRouter } from "vue-router";
     import { ref, onMounted, onUnmounted } from "vue";
+    import { useCodeButtonStore } from '../../store/index'
     const router = useRouter()
     
     const showSecondFloor = ref(false)
-
+    const useCodeButton = useCodeButtonStore()
     const goHome = () => {
         router.push('/home')
     }
@@ -58,6 +59,7 @@
     const body = window.document.getElementsByTagName('body')[0]
     onMounted(() => {
         body.style.overflow = 'hidden'
+        useCodeButton.hiddenButton()
     })
     onUnmounted(() => {
         body.style.overflow = 'auto'
