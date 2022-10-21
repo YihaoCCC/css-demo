@@ -15,7 +15,7 @@ import YhModal from '../../../components/YhModal.vue';
  onMounted(() => {
     useCodeButtonStore().showButton()
  })
-</script
+</script>
 
 <style lang="scss" scoped>
    @import './input2.scss';

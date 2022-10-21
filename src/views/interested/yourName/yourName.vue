@@ -4,11 +4,13 @@
         <div>
             tips:当canva的位置在dom中有变动时候，鼠标会有偏移，因为e.pageX是从document顶点出发的
         </div>
+        <YhModal></YhModal>
     </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
+import YhModal from '../../../components/YhModal.vue';
     
     onMounted(() => {
         const cvs:HTMLCanvasElement = document.getElementById('writename') as HTMLCanvasElement

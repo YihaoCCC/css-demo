@@ -15,14 +15,12 @@
                     </div>
                     <div class="conntent">
                         <div class="JS codeBox">
-                            <code>  
-                                dasfsadfadsfadsf
-                            </code>
+                            <p class="title">vue3.0</p>
+                            <v-md-preview :text="htmlcode" height="400px"></v-md-preview>
                         </div>
                         <div class="scss codeBox">
-                            <code>
-                                sdafadsfsadfads
-                            </code>
+                            <p class="title">scss(less)</p>
+                            <v-md-preview :text="cssCode"></v-md-preview>
                         </div>
                     </div>
                     <div class="footer">
@@ -36,17 +34,24 @@
 </template>
 
 <script setup lang="ts">
-// import { getCurrentInstance,ref } from 'vue'
 import { useModalStore } from '../store/modal'
 
 const useModal = useModalStore()
 const close = () => {
+    // 使用pina控制开关
     useModal.closeModal()
 }
-// const instance = getCurrentInstance()
-// const show = ref(instance!.appContext.config.globalProperties.$showModal)
+defineProps({
+    htmlcode: {
+        type: String,
+        default: '### 暂未更新此部分代码！'
+    },
+    cssCode: {
+        type: String,
+        default: '### 暂未更新此部分代码'
+    }
+})
 
-// 使用pina
 
 </script>
 
@@ -66,8 +71,8 @@ const close = () => {
     font-weight: 600;
 
     .modalContent {
-        width: 50%;
-        height: 60%;
+        width: 60%;
+        height: 70%;
         background-color: var(--theme-rightContent-color);
         border-radius: 20px;
         padding: 20px 26px;
@@ -101,9 +106,23 @@ const close = () => {
             justify-content: space-between;
             width: 100%;
             .codeBox {
-                width: 50%;
-                max-height: 40vh;
+                width: 49%;
+                max-height: 60vh;
                 overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 4px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 5px var(--theme-font-deeper);
+                    background: var(--theme-rightContent-color);
+                }
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                    border-radius: 0;
+                    background: rgba(0,0,0,0.1);
+                }
             }
         }
     }
@@ -129,5 +148,10 @@ const close = () => {
     100% {
         transform: scale(1);
     }
+}
+
+.github-markdown-body {
+    padding: 0 !important;
+
 }
 </style>
