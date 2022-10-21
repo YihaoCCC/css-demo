@@ -39,9 +39,16 @@
                 <p>人生这么短暂，就不要让一些糟糕的事情占据你这宝贵的时间啦！来到这人世间本就是一场体验，要尽量让自己尽兴一点！</p>
             </div>
         </div>
+        <YhModal></YhModal>
     </div>
 </template>
 <script lang="ts" setup>
+import { onMounted } from 'vue'
+import { useCodeButtonStore } from '../../store/index'
+import YhModal from '../../components/YhModal.vue';
+onMounted(() => {
+    useCodeButtonStore().showButton()
+})
 
 </script>
 

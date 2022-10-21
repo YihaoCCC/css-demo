@@ -32,7 +32,11 @@
 </template>
 <script lang="ts" setup>
 import YhModal from '../../components/YhModal.vue';
-
+import { useCodeButtonStore } from '../../store/index'
+import { onMounted } from 'vue'
+onMounted(() => {
+  useCodeButtonStore().hiddenButton()
+})
 </script>
 <style lang="scss" scoped>
     @import './dashbord.scss';
