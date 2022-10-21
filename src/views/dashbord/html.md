@@ -1,3 +1,4 @@
+```html
 <template>
     <div class="components">
         <div class="switch">
@@ -25,12 +26,13 @@
             
             <div class="segmented-control__color"></div>
         </div>
-        <YhModal :css-code="css" :htmlcode="html"></YhModal>
+        <YhModal >
+
+        </YhModal>
   </div>
 </template>
 <script lang="ts" setup>
 import YhModal from '../../components/YhModal.vue';
-import { css, html } from './code'
 import { useCodeButtonStore } from '../../store/index'
 import { onMounted } from 'vue'
 onMounted(() => {
@@ -40,3 +42,4 @@ onMounted(() => {
 <style lang="scss" scoped>
     @import './dashbord.scss';
 </style>
+```

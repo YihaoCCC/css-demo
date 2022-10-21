@@ -15,7 +15,7 @@
             </div>
             <div class="footer" @click="addClass">
                 <div class="enter" >
-                    enter
+                    click here
                 </div>
                 <div class="arrow arrow-1"></div>
 
@@ -47,7 +47,6 @@
     const router = useRouter()
     
     const showSecondFloor = ref(false)
-
     const goHome = () => {
         router.push('/home')
     }

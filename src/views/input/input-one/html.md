@@ -1,3 +1,4 @@
+```html
 <template>
         <div>
             <p>tip: label背景、input背景、盒元素背景三者要保持一致</p>
@@ -5,12 +6,12 @@
                 <input type="text" id="myinput" required>
                 <label for="myinput">placeholder</label>
             </div>
-            <YhModal :css-code="css" :htmlcode="html"></YhModal>
+            <YhModal :css-code="markdownTxt"></YhModal>
         </div>
 </template>
 
 <script lang="ts" setup>
-import { css, html } from './code'
+import markdownTxt from './code.md?raw'
 import { onMounted } from 'vue'
 import { useCodeButtonStore } from '../../../store/index'
 import YhModal from '../../../components/YhModal.vue';
@@ -22,3 +23,5 @@ import YhModal from '../../../components/YhModal.vue';
 <style lang="scss" scoped>
     @import './input1.scss';
 </style>
+
+```
