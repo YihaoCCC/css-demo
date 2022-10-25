@@ -70,6 +70,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'userlist',
                         name: 'userlist',
                         component: () => import('../views/List/userlist/user.vue')
+                    },
+                    {
+                        path: '3d',
+                        name: '3d介绍',
+                        component: () => import('../views/List/3D/3D.vue')
                     }
                 ]
 
