@@ -26,6 +26,7 @@
       </svg>
     </div>  
   </div>
+  <div id="modal"></div>
 
 
 </template>

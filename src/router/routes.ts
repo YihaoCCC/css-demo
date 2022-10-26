@@ -100,6 +100,23 @@ export const routes:RouteRecordRaw[] = [
                         component: () => import('../views/interested/iphone14/iphone14.vue')
                     }
                 ]
+            },
+            {
+                path: 'navbar',
+                name: 'navbar',
+                redirect: '/home/navbar/nav-one',
+                children: [
+                    {
+                        path: 'nav-one',
+                        name: 'nav-one',
+                        component: () => import('../views/navbar/nav-one/nav-one.vue')
+                    },
+                    {
+                        path: 'nav-two',
+                        name: 'nav-two',
+                        component: () => import('../views/navbar/nav-two/nav-two.vue')
+                    }
+                ]
             }
         ]
     },

@@ -9,12 +9,17 @@
             </div>            
             
         </div>
-        
+        <YhModal></YhModal>
     </div>
 </template>
 
 <script lang="ts" setup>
-    import { ref} from 'vue';
+    import { ref, onMounted} from 'vue';
+    import { useCodeButtonStore } from '../../../store/index'
+    import YhModal from '../../../components/YhModal.vue';
+    onMounted(() => {
+        useCodeButtonStore().showButton()
+    })
     const child = ref(null)
     const main = ref(null)
     let num:number = 1
