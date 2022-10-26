@@ -19,28 +19,25 @@
             width: 95%;
             height: 240px;
             position: absolute;
-            top: 0;
-            left: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            border: 1px solid var(--main-color);
             &:nth-child(1) {
                 background-color: var(--main-color);
-                filter: hue-rotate(90deg);
-                transform: rotateX(-270px) translateY(-115px); 
+                filter: hue-rotate(8deg);
+                transform: rotateX(-270deg) translateY(-118px); 
                 transform-origin: top center;
             }
             &:nth-child(2) {
                 background-color: var(--main-color);
-                filter: hue-rotate(180deg);
+                filter: hue-rotate(68deg);
                 transform: translateZ(115px);
             }
             &:nth-child(3) {
                 background-color: var(--main-color);
-                filter: hue-rotate(360deg);
-                transform: rotateX(-90px) translateY(115px); 
+                filter: hue-rotate(128deg);
+                transform: rotateX(-90deg) translateY(123px); 
                 transform-origin: bottom center;
             }
         }        
