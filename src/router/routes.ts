@@ -70,11 +70,6 @@ export const routes:RouteRecordRaw[] = [
                         path: 'userlist',
                         name: 'userlist',
                         component: () => import('../views/List/userlist/user.vue')
-                    },
-                    {
-                        path: '3d',
-                        name: '3d介绍',
-                        component: () => import('../views/List/3D/3D.vue')
                     }
                 ]
 
@@ -103,6 +98,23 @@ export const routes:RouteRecordRaw[] = [
                         path: 'iphone14',
                         name: 'iphone14',
                         component: () => import('../views/interested/iphone14/iphone14.vue')
+                    }
+                ]
+            },
+            {
+                path: 'navbar',
+                name: 'navbar',
+                redirect: '/home/navbar/nav-one',
+                children: [
+                    {
+                        path: 'nav-one',
+                        name: 'nav-one',
+                        component: () => import('../views/navbar/nav-one/nav-one.vue')
+                    },
+                    {
+                        path: 'nav-two',
+                        name: 'nav-two',
+                        component: () => import('../views/navbar/nav-two/nav-two.vue')
                     }
                 ]
             }

@@ -54,7 +54,7 @@ export const routeList:Array<myRouterItem> = [
                 name : '人物列表',
             },
             {
-                path: '/home/list/3D',
+                path: '/home/list/threeD',
                 name: '3D旋转介绍'
             }
         ]
@@ -79,6 +79,21 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/intersting/iphone14',
                 name: '灵动岛'
+            }
+        ]
+    },
+    {
+        path: '/home/navbar',
+        name: '导航栏',
+        icon: 'LocationFilled',
+        children: [
+            {
+                path: '/home/navbar/nav-one',
+                name: '导航切换'
+            },
+            {
+                path: '/home/navbar/nav-two',
+                name: '3D切换'
             }
         ]
     },

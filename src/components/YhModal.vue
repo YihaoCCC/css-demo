@@ -13,13 +13,27 @@
                             </path>
                         </svg>
                     </div>
-                    <div class="conntent">
+                    <div class="content">
                         <div class="JS codeBox">
-                            <p class="title">vue3.0</p>
+                            <div class="title">
+                                <span>
+                                    vue3.0
+                                </span>
+                                <button @click="copyCode('html')">
+                                    点击复制
+                                </button>
+                            </div>
                             <v-md-preview :text="htmlcode" height="400px"></v-md-preview>
                         </div>
                         <div class="scss codeBox">
-                            <p class="title">scss(less)</p>
+                            <div class="title">
+                                <span>
+                                    scss(less)
+                                </span>
+                                <button @click="copyCode('css')">
+                                    点击复制
+                                </button>
+                            </div>
                             <v-md-preview :text="cssCode"></v-md-preview>
                         </div>
                     </div>
@@ -41,7 +55,7 @@ const close = () => {
     // 使用pina控制开关
     useModal.closeModal()
 }
-defineProps({
+const props = defineProps({
     htmlcode: {
         type: String,
         default: '### 暂未更新此部分代码！'
@@ -51,6 +65,40 @@ defineProps({
         default: '### 暂未更新此部分代码'
     }
 })
+// 点击复制
+const copyCode = (type:string) => {
+    let code
+    switch(type) {
+        case 'html': {
+            code = props.htmlcode
+            console.log(props.htmlcode);            
+            break;
+        }
+        case 'css' : {
+            code = props.cssCode
+            console.log(props.cssCode);            
+            break;
+        }
+        default: {
+            console.log('error');
+        }
+    }
+      // 创建一个input标签，并将需要复制的文本绑定到input标签
+      const inp = document.createElement("input");
+      inp.type = "text";
+      if(code) {
+        inp.value = code;
+      }
+      // 向body节点添加这个input标签
+      document.body.appendChild(inp);
+      // 调用input标签的select()方法，选中文本
+      inp.select();
+      // 调用# document.execCommand()方法执行copy命令
+      document.execCommand("Copy", true);
+      // 从DOM中移除该input标签
+      document.body.removeChild(inp);
+
+}
 
 
 </script>
@@ -100,7 +148,7 @@ defineProps({
             }
             
         }
-        .conntent {
+        .content {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -109,6 +157,24 @@ defineProps({
                 width: 49%;
                 max-height: 60vh;
                 overflow: auto;
+                .title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 5px  10px 0;
+                    button {
+                        color: inherit;
+                        border-radius: 5px;
+                        padding: 3px 5px;
+                        border: none;
+                        background-color: var(--theme-rightContent-color);
+                        transition: all .3s ease-in-out;
+                        &:hover {
+                            background-color: var(--main-color);
+                        }
+                        
+                    }
+                }
                 &::-webkit-scrollbar {
                     width: 8px;
                     height: 4px;

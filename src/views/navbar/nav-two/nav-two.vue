@@ -1,10 +1,9 @@
 <template>
-     name都等于tab什么作用？
-    <div class="content_3d">
+    <div class="navbar-two">
         <input type="radio" name="tab" id="tab1" checked>
         <input type="radio" name="tab" id="tab2" >
         <input type="radio" name="tab" id="tab3" >
-        <div class="cube">
+        <div class="cube">     
             <div class="item_content">
                 <h1>this is des title1</h1>
                 <p>this is some description</p>
@@ -26,14 +25,15 @@
     </div>
 </template>
 
-<script lang='ts' setup>
-    import {useCodeButtonStore} from '../../../store/index'
-    import { onMounted } from 'vue';
-    onMounted(() => {
-        useCodeButtonStore().hiddenButton()
-    })
+<script setup lang="ts">
+import { useCodeButtonStore } from '../../../store/index'
+import { onMounted } from 'vue'
+onMounted(() => {
+    useCodeButtonStore().hiddenButton()
+})
+
 </script>
 
-<style scoped lang="scss">
-@import './3D.scss';
+<style lang="scss" scoped>
+    @import './nav-two.scss';
 </style>

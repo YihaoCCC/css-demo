@@ -4,7 +4,7 @@ import { routes } from './routes'
 
 const router = createRouter({
     routes,
-    history: createWebHistory()
+    history: createWebHashHistory()
 })
 
 router.beforeEach((from, to, next) => {
