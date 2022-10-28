@@ -127,6 +127,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'yourname',
                         name: 'yourname',
                         component: () => import('../views/function/yourName/yourName.vue')
+                    },
+                    {
+                        path: 'pinia',
+                        name: 'pinia',
+                        component: () => import('../views/function/pinia/pinia.vue')
                     }
                 ]
             }

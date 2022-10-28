@@ -109,6 +109,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/function/vertifyCode',
                 name: '滑动验证'
+            },
+            {
+                path: '/home/function/pinia',
+                name: 'pinia'
             }
         ]
     },

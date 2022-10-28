@@ -7,9 +7,6 @@ export const useModalStore = defineStore('useModal', {
         }
     },
     actions: {
-        // openModal: () => {
-        //     this.showModal = true
-        // }
         openModal () {
             this.showModal = true
         },

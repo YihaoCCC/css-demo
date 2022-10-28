@@ -97,6 +97,7 @@ watch(() => route.fullPath, (val) => {
         .routeItem {
             margin: 0 10px;
             text-align: start;
+            width: 80px;
         }
 
         .down {

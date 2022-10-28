@@ -70,9 +70,10 @@ const showModal = () => {
   width: 13%;
   height: 100vh;
   color: var(--theme-font-color);
-  padding: 15px 0px 0 10px;
+  padding: 0px 0px 0 10px;
   box-sizing: border-box;
   background-color: transparent;
+  overflow: auto;
 
   .leftHeader {
     display: flex;
@@ -82,6 +83,12 @@ const showModal = () => {
     font-weight: bolder;
     margin-bottom: 30px;
     color: var(--theme-font-deeper);
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--theme-rightContent-color);
+    z-index: 100;
+    padding: 15px 0 5px 0;
   }
 
   .logo {
