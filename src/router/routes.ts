@@ -85,11 +85,6 @@ export const routes:RouteRecordRaw[] = [
                         component: () => import('../views/interested/textPeople/testPeople.vue')
                     },
                     {
-                        path: 'yourname',
-                        name: 'yourname',
-                        component: () => import('../views/interested/yourName/yourName.vue')
-                    },
-                    {
                         path: 'textBackImg',
                         name: 'textBackImg',
                         component: () => import('../views/interested/text/textBackImg.vue')
@@ -115,6 +110,28 @@ export const routes:RouteRecordRaw[] = [
                         path: 'nav-two',
                         name: 'nav-two',
                         component: () => import('../views/navbar/nav-two/nav-two.vue')
+                    }
+                ]
+            },
+            {
+                path: 'function',
+                name: 'function',
+                redirect: '/home/function/vertifyCode',
+                children: [
+                    {
+                        path: 'vertifyCode',
+                        name: 'vertify',
+                        component: () => import('../views/function/vertifyCode/vertifyImgCode.vue')
+                    },
+                    {
+                        path: 'yourname',
+                        name: 'yourname',
+                        component: () => import('../views/function/yourName/yourName.vue')
+                    },
+                    {
+                        path: 'pinia',
+                        name: 'pinia',
+                        component: () => import('../views/function/pinia/pinia.vue')
                     }
                 ]
             }

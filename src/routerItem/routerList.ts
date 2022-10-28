@@ -98,6 +98,25 @@ export const routeList:Array<myRouterItem> = [
         ]
     },
     {
+        path: '/home/function',
+        name: '功能性组件',
+        icon: 'Tools',
+        children: [
+            {
+                path: '/home/function/yourname',
+                name: '签名'
+            },
+            {
+                path: '/home/function/vertifyCode',
+                name: '滑动验证'
+            },
+            {
+                path: '/home/function/pinia',
+                name: 'pinia'
+            }
+        ]
+    },
+    {
         path: '/home/404page',
         icon: 'CircleCloseFilled',
         name: '404页面'

@@ -5,7 +5,34 @@
 [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
   
 >从VueLearn router-demo的组件库抽离组件，这个仓库以后就用来做样式库，无任何逻辑处理，可以直接供外部调用。如果必要的时候需要用到Js代码建议使用`vue3`的`setup`语法进行统一维护
-
+### 项目结构
+```
+|-- dist       // 打包文件夹
+|-- public     // 静态资源文件 
+|-- src       // 项目源码
+    |-- App.vue        // 根组件App  
+    |-- global.scss    // 全局样式文件
+    |-- main.ts        // 项目全局ts文件
+    |-- style.css      // 全局样式文件
+    |-- vite-env.d.ts  // ts类型定义文件
+    |-- assets         // 静态资源文件
+    |-- components     // 可抽离组件片资源文件
+    |-- plugins        // 项目插件资源
+    |-- router         // 项目路由文件
+    |-- routerItem     // 前端侧边栏渲染目录结构
+    |-- store          // 全局存储
+    |-- views          // 子页面（举例）
+    |   |-- interested     // 子页面一级父文件夹
+    |   |   |-- iphone14   // 子页面二级父文件夹
+    |   |   |   |-- iphone14.scss
+    |   |   |   |-- iphone14.vue
+    |   |   |-- text
+    |   |   |   |-- textBackImg.vue
+    |   |   |-- textPeople
+    |   |       |-- testpeople.scss
+    |   |       |-- testPeople.vue
+|-- tsconfig.json          // ts配置文件
+|-- vite.config.ts        // vite配置文件
 
 ## 一：添加新的组件页面和路由
 
