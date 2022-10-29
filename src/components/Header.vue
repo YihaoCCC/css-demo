@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="theme headerItem">
-            <div class="toggleWrapper">
+            <div class="toggleWrapper" id="step3">
                 <input @change="changeTheme" v-model="theme" type="checkbox" class="dn" id="dn">
                 <label for="dn" class="toggle">
                     <span class="toggle__handler">
@@ -18,7 +18,7 @@
                 </label>
             </div>
         </div>
-        <div class="headerItem">
+        <div class="headerItem" id="step4">
             <div class="avatar">
                 <img src="https://bcn.135editor.com/files/users/541/5419088/202209/nFkH9gIB_u4ma.png" alt="">
             </div>

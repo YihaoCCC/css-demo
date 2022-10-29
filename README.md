@@ -33,7 +33,7 @@
     |   |       |-- testPeople.vue
 |-- tsconfig.json          // ts配置文件
 |-- vite.config.ts        // vite配置文件
-
+```
 ## 一：添加新的组件页面和路由
 
 项目制定了添加页面的主流程，如下流程所示：

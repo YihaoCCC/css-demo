@@ -1,7 +1,7 @@
 
 <template>
   <RouterView></RouterView>
-  <div class="fixedBox">
+  <div class="fixedBox" id="step5">
     <div class="content">
       <div class="watermark">
         <div class="main-color item">

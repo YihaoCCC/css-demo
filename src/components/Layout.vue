@@ -2,7 +2,7 @@
   <div class="layout">
 
     <div class="leftBar">
-      <div class="leftHeader" @click="goDoor">
+      <div class="leftHeader" @click="goDoor" id="step1">
         <div class="logo">
           C
         </div>
