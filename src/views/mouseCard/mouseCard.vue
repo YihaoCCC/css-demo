@@ -18,13 +18,16 @@
                 <img src="../../img/风景图.jpg" alt="">
                 <p>我本来打算告诉你在你不在我身边的这段时间里，我遇到的所有糟糕事，但最后我只想告诉你，我很想你。</p>
             </div>
-            <div class="imgBox">
+            <div class="imgBox type5">
                 <img src="../../img/风景图.jpg" alt="">
-                <p>人生这么短暂，就不要让一些糟糕的事情占据你这宝贵的时间啦！来到这人世间本就是一场体验，要尽量让自己尽兴一点！</p>
-            </div>
-            <div class="imgBox">
-                <img src="../../img/风景图.jpg" alt="">
-                <p>人生这么短暂，就不要让一些糟糕的事情占据你这宝贵的时间啦！来到这人世间本就是一场体验，要尽量让自己尽兴一点！</p>
+                <h1>Yihao Chen</h1>
+                <h4>Programmer</h4>
+                <div class="describe">
+                    Luck：2022 just a web Desginer
+                </div>
+                <div class="KnowMore">
+                    <button>了解更多</button>
+                </div>    
             </div>
             <div class="imgBox">
                 <img src="../../img/风景图.jpg" alt="">
