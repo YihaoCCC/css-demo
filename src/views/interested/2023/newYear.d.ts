@@ -1,0 +1,3 @@
+interface yhWordResponse {
+    word: string
+}

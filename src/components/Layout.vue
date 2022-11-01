@@ -67,7 +67,7 @@ const showModal = () => {
 }
 
 .leftBar {
-  width: 13%;
+  width: 214px;
   height: 100vh;
   color: var(--theme-font-color);
   padding: 0px 0px 0 10px;
