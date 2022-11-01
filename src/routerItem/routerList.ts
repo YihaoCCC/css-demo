@@ -79,6 +79,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/intersting/iphone14',
                 name: '灵动岛'
+            },
+            {
+                path: '/home/intersting/2023',
+                name: '元旦'
             }
         ]
     },

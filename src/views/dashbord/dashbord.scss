@@ -134,3 +134,12 @@ $shadow: .3rem .3rem .6rem var(--greyLight-2),
   transform: translateX(13.6rem);
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
+.index{ 
+  background-color: var(--main-color);
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+}

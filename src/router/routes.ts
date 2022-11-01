@@ -93,6 +93,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'iphone14',
                         name: 'iphone14',
                         component: () => import('../views/interested/iphone14/iphone14.vue')
+                    },
+                    {
+                        path: '2023',
+                        name: '2023',
+                        component: () => import('../views/interested/2023/2023.vue') 
                     }
                 ]
             },

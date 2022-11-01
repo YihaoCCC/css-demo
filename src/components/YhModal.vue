@@ -117,6 +117,7 @@ const copyCode = (type:string) => {
     background-color: rgba($color: #666666, $alpha: .6);
     color: var(--theme-font-deeper);
     font-weight: 600;
+    z-index: 101;
 
     .modalContent {
         width: 60%;
