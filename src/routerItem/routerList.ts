@@ -52,10 +52,6 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/list/userlist',
                 name : '人物列表',
-            },
-            {
-                path: '/home/list/threeD',
-                name: '3D旋转介绍'
             }
         ]
     },

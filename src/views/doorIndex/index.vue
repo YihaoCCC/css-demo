@@ -24,6 +24,12 @@
             </div>
         </div>
         <div class="secondFloor" :class="showSecondFloor ?'show' : '' ">
+            <div class="secondChangePlan">
+                <input  v-model="code" class="input" maxlength="6" >
+                <div class="number" :class="shaking ? 'shaking':''" v-for="item in 4" :key="item">
+                    {{code[item-1]? code[item-1] :""}}
+                </div>  
+            </div>
             <div>
                 <button class="my-fly-button" @click="goHome">
                     <div class="svg-wrapper-1">
@@ -45,10 +51,16 @@
     import { useRouter } from "vue-router";
     import { ref, onMounted, onUnmounted } from "vue";
     const router = useRouter()
-    
+    const code = ref('')
     const showSecondFloor = ref(false)
+    const shaking = ref(false)
     const goHome = () => {
-        router.push('/home')
+        shaking.value = false
+        if(code.value === '1234') {
+            router.push('/home')
+        } else{ 
+            shaking.value = true
+        }
     }
 
     const addClass = () => {
