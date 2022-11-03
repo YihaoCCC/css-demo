@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <h1 style="margin: 0px 0 80px 0 ">导航栏</h1>
-       <div class="navgition">
+       <div class="navgition1">
             <ul>
                 <li class="active  icon-item" style="--clr:#f44336">
                     <svg t="1653358994818" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3036" width="30" height="30"><path d="M96 480c-9.6 0-19.2-3.2-25.6-12.8-12.8-12.8-9.6-35.2 3.2-44.8l377.6-310.4c35.2-25.6 86.4-25.6 118.4 0l377.6 307.2c12.8 9.6 16 32 3.2 44.8-12.8 12.8-32 16-44.8 3.2L531.2 166.4c-9.6-6.4-28.8-6.4-38.4 0L115.2 473.6c-6.4 6.4-12.8 6.4-19.2 6.4zM816 928H608c-19.2 0-32-12.8-32-32v-150.4c0-22.4-38.4-44.8-67.2-44.8-28.8 0-64 19.2-64 44.8V896c0 19.2-12.8 32-32 32H211.2C163.2 928 128 892.8 128 848V544c0-19.2 12.8-32 32-32s32 12.8 32 32v304c0 9.6 6.4 16 19.2 16H384v-118.4c0-64 67.2-108.8 128-108.8s131.2 44.8 131.2 108.8V864h176c9.6 0 16 0 16-19.2V544c0-19.2 12.8-32 32-32s32 12.8 32 32v304C896 896 864 928 816 928z" fill="#333" p-id="3037"></path></svg>
@@ -23,14 +23,40 @@
                 </div>
             </ul>
        </div>
+       <div class="navgition2">
+            <ul > 
+                <li class="na2 active2">
+                    <el-icon><House /></el-icon>
+                    <span>Home</span>
+                </li> 
+                <li class="na2">
+                    <el-icon><User /></el-icon>
+                    <span>User  </span>
+                </li> 
+                <li class="na2">
+                    <el-icon><Edit /></el-icon>
+                    <span>Edit</span>
+                </li> 
+                <li class="na2">
+                    <el-icon><ChatDotSquare /></el-icon>
+                    <span>Message</span>
+                </li> 
+                <li class="na2">
+                    <el-icon><Setting /></el-icon>
+                    <span>Setting</span>
+                </li>
+                <div class="driction">
+
+                </div>
+            </ul>
+       </div>
     </div>    
 </template>
 <script setup>
     import {onMounted} from 'vue'
     onMounted(() => {
-        const liList = document.querySelectorAll('.icon-item')
-        console.log(liList);
-        function setActive() {
+        const liList = document.querySelectorAll('.icon-item')       
+        function setActive1() {
             liList.forEach((item) => {
                 item.classList.remove('active')
             })
@@ -38,7 +64,18 @@
             console.log(this.classList);
         }
         liList.forEach((item) => {
-            item.addEventListener('click', setActive)
+            item.addEventListener('click', setActive1)
+        })
+
+        const na2 = document.querySelectorAll('.na2')
+        function setActive2() {
+            na2.forEach(item => {
+                item.classList.remove('active2')
+            })
+            this.classList.add('active2')
+        }
+        na2.forEach(item => {
+            item.addEventListener('click', setActive2)
         })
     })
     
