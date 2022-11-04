@@ -52,6 +52,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/home/list/userlist',
                 name : '人物列表',
+            },
+            {
+                path: '/home/list/introdution',
+                name: '产品介绍'
             }
         ]
     },
@@ -65,12 +69,8 @@ export const routeList:Array<myRouterItem> = [
                 name: 'text图片'
             },
             {
-                path: '/home/intersting/yourname',
-                name: '手写签名'
-            },
-            {
                 path: '/home/intersting/textBackImg',
-                name: '文字背景运动'
+                name: '动态背景'
             },
             {
                 path: '/home/intersting/iphone14',

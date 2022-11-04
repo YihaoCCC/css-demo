@@ -65,3 +65,58 @@
         }
     }
 }
+
+.buttonFly {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212532;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    transition-delay: .8s;
+    .buttonItem {
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 7px;
+        height: 7px;
+        background-color: #fff;
+        transform: translate(calc(12px*var(--x)),calc(12px*var(--y)));
+        transition: all .5s ease-in-out;
+        transition-delay: calc(0.1s*var(--t));
+        el-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        svg {
+            transition: all .3s ease-in-out;
+            &:hover {   
+                filter: drop-shadow(0 0 2px var(--main-color)) drop-shadow(0 0 4px var(--main-color)) drop-shadow(0 0 6px var(--main-color));
+            }
+        }
+    }
+    &.active {
+        width: 200px;
+        height: 200px;
+        transition-delay: 0s;
+        .buttonItem {
+            width: 45px;
+            height: 45px;
+            background-color: #3d4161;
+            transform: translate(calc(60px*var(--x)),calc(60px*var(--y)));
+            svg {
+                width: 50%;
+                height: 50%;
+                color: var(--main-color);
+            }
+            
+        }
+    }
+}
