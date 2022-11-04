@@ -70,6 +70,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'userlist',
                         name: 'userlist',
                         component: () => import('../views/List/userlist/user.vue')
+                    },
+                    {
+                        path: 'introdution',
+                        name: 'introdution',
+                        component: () => import('../views/List/introduction/introduction.vue')
                     }
                 ]
 
