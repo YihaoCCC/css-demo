@@ -26,6 +26,7 @@
             <div class="segmented-control__color"></div>
         </div>
         <div class="index"><el-button type="primary" @click.prevent.stop="guide">打开引导页 🤹‍♂️</el-button></div>
+		<div class="index"><el-button type="primary" @click.prevent.stop="light">打开手电筒 🤹‍♂️</el-button></div>
         <YhModal :css-code="css" :htmlcode="html"></YhModal>
   </div>
 </template>
@@ -61,7 +62,41 @@ const guide = () => {
   // 用户进入后只执行一遍
   sessionStorage.setItem('showIndex', '1')
 };
-
+const light = () => {
+	document.querySelector('style')?.append(`canvas {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 9999;
+		pointer-events: none;
+	}`)
+	document.body.appendChild(document.createElement('canvas'))
+	const cvs = document.querySelector('canvas') 
+	const ctx = cvs?.getContext('2d')
+	cvs!.width = document.documentElement.clientWidth 
+	cvs!.height = document.documentElement.clientHeight
+	const p = {
+		x: 0,
+		y: 0,
+		r: 50
+	}
+	document.onmousemove = e => {
+		p.x = e.clientX
+		p.y = e.clientY
+		render()
+	}
+	const render = () => {
+		ctx?.beginPath()
+		ctx?.clearRect(0, 0, cvs!.width, cvs!.height)
+		var radial = ctx?.createRadialGradient(p.x, p.y, p.r, p.x, p.y, p.r * 3)
+		radial?.addColorStop(0, 'rgba(255, 255, 255, 0.1)')
+		radial?.addColorStop(1, 'rgba(0, 0, 0, 0.5)')
+		if(ctx && radial) {
+			ctx!.fillStyle = radial;
+		}
+		ctx?.fillRect(0, 0, cvs!.width, cvs!.height)
+	}
+}
 const steps = [
 	{
 		element: "#step1",
