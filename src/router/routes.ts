@@ -103,6 +103,11 @@ export const routes:RouteRecordRaw[] = [
                         path: '2023',
                         name: '2023',
                         component: () => import('../views/interested/2023/2023.vue') 
+                    },
+                    {
+                        path: 'draw',
+                        name: 'draw',
+                        component: () => import('../views/interested/draw/draw.vue')
                     }
                 ]
             },

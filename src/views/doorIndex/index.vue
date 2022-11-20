@@ -30,6 +30,7 @@
                     {{code[item-1]? code[item-1] :""}}
                 </div>  
             </div>
+            <p>PIN: 1234</p>
             <div>
                 <button class="my-fly-button" @click="goHome">
                     <div class="svg-wrapper-1">
@@ -60,6 +61,9 @@
             router.push('/home')
         } else{ 
             shaking.value = true
+            setTimeout(() => {
+                shaking.value = false
+            }, 1500)
         }
     }
 

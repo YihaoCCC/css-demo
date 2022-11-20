@@ -139,6 +139,9 @@
                     border: 1px solid rgba(white, 0.3);
                 }
             }
+            .number.shaking {
+                border-color: var(--main-color);
+            }
             .shaking {
                 animation: shaking 1s ease-in;
             }
