@@ -26,7 +26,8 @@
             <div class="segmented-control__color"></div>
         </div>
         <div class="index"><el-button type="primary" @click.prevent.stop="guide">打开引导页 🤹‍♂️</el-button></div>
-		<div class="index"><el-button type="primary" @click.prevent.stop="light">打开手电筒 🤹‍♂️</el-button></div>
+		<div class="index"><el-button type="primary" @click.prevent.stop="light">打开手电筒 🎉</el-button></div>
+		<div class="index"><el-button type="primary" @click.prevent.stop="notice">获得此网站通知</el-button> ✔✨</div>
         <YhModal :css-code="css" :htmlcode="html"></YhModal>
   </div>
 </template>
@@ -36,6 +37,7 @@ import { css, html } from './code'
 import { useCodeButtonStore } from '../../store/index'
 import { onMounted } from 'vue'
 import Driver from "driver.js";
+import Push from 'push.js'
 import "driver.js/dist/driver.min.css";
 
 onMounted(() => {
@@ -96,6 +98,16 @@ const light = () => {
 		}
 		ctx?.fillRect(0, 0, cvs!.width, cvs!.height)
 	}
+}
+const notice = () => {
+	Push.create("欢迎访问 Million UI ！", {
+		body: "来自Million UI 的通知：此网站不会窃取任何浏览器信息！请放心访问！",
+		icon: '/icon.png',
+		timeout: 5000,
+		onClick: function () {
+			window.focus();
+		}
+	});
 }
 const steps = [
 	{
