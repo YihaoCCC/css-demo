@@ -1,5 +1,6 @@
 <template>
     <div class="newYear">
+        <div class="snow" v-for="item in 500" :key="item"></div>
         <input type="text" v-model="name">
         <button @click="test">test</button>
         <div class="wordBox" v-if="showBox">
@@ -23,32 +24,6 @@ const test = () => {
 </script>
 
 <style lang="scss" scoped>
-.wordBox {
-    overflow: hidden;
-    height: 1.3em;
-    animation: wordPrintln 2s steps(50), blink-caret .75s step-end infinite;
-    word-break: break-all;
-    border-right: 1px solid transparent;
-}
+@import './2023.scss';
 
-@keyframes wordPrintln {
-    0% {
-        width: 10px;
-    }
-    100% {
-        width: 100%;
-    }
-}
-/* 光标 */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: currentColor;
-    }
-}
 </style>
