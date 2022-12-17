@@ -4,13 +4,13 @@ p {
     em {  
         font-size: 36px;
         font-weight: 600;
-        color: #df5f1a;
+        color: var(--main-color);
     }
 }
 
 button {
     padding: 6px 15px;
-    
+
 }
 
 .content {

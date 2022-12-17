@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>剩余抽奖次数 <em>{{ num }}</em> 次</p>
-        <button v-if="num === 0" @click="refresh">充值奖池，再来一次</button>
+        <button v-if="num === 0" @click="refresh">重置奖池，再来一次</button>
         <div class="content">
             <div class="card noClick">
                 <span>奖</span>
@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, inject } from 'vue'
 import { useRouter } from 'vue-router'
 
 const num = ref(3)
@@ -79,6 +79,7 @@ function clickFunction() {
 }
 
 onMounted(() => {
+    console.log('shuaxinle ')
     document.querySelectorAll('.card').forEach((item) => {
         item.addEventListener('click', clickFunction)
     })
@@ -98,9 +99,7 @@ onMounted(() => {
 })
 
 
-const refresh = () => {
-    router.push('/home/intersting/draw')
-}
+const refresh = inject('reload')
 </script>
 
 
