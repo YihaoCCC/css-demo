@@ -30,7 +30,7 @@
                     {{code[item-1]? code[item-1] :""}}
                 </div>  
             </div>
-            <p v-if="shaking">PIN: 1234</p>
+            <p>{{shaking ? "PIN: 1234" : "随便输几个数字试试"}}</p>
             <div>
                 <button class="my-fly-button" @click="goHome">
                     <div class="svg-wrapper-1">

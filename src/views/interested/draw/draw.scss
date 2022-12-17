@@ -1,0 +1,79 @@
+p {
+    text-align: center;
+    font-size: 30px;
+    em {  
+        font-size: 36px;
+        font-weight: 600;
+        color: var(--main-color);
+    }
+}
+
+button {
+    padding: 6px 15px;
+
+}
+
+.content {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+}
+.card {
+    position: relative;
+    font-size: 36px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #df5f1a;
+    border: 2px solid #df5f1a;
+    transition: all .3s ease-in-out; 
+    transform-style: preserve-3d;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+    span,.back {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+        /* 弹性布局，让元素垂直陈列 */
+        display: flex;
+        /* 现在子元素垂直陈列，那么就是让子元素水平居中 */
+        align-items: center;
+        /* 平均分配高度给每一个子元素 */
+        justify-content: center;
+        text-align: center;
+        background-color: #e76823c8;
+        border-radius: 20px;
+        /* 隐藏旋转div元素的背面 */
+        backface-visibility: hidden;
+        color: #fff;
+        font-size: 30px;
+        transform-style: preserve-3d;
+    }
+    .back {
+        font-size: 24px;
+        background-color: #f7c9b0;
+        color: #df5f1a;
+        transform: rotateY(0.5turn);
+    }
+    &.clicked{
+        transform: rotateY(0.5turn);      
+    }
+    &.alwaysNoClick{
+        transform: rotateY(0.5turn); 
+        .back {
+            color: #f8f8f8;
+            background-color: #f7c9b0;
+        }
+    }
+}   
