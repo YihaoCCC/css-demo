@@ -45,6 +45,12 @@
                   </button>
             </div>
         </div>
+        <div class="law">
+            本站代码仅供学习使用！！！转载请注明出处！<a href="https://beian.miit.gov.cn" target="_blank"><span>津ICP备2023000282号-1</span></a>
+            <div style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011102001509" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/备案图标.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">津公网安备 12011102001509号</p></a>
+		 	</div>
+        </div>
     </div>
 </template>
 

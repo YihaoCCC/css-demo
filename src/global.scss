@@ -125,5 +125,12 @@
                         transition: all ease .5s; 
     }
 }
+.isPhone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
 
+}
 

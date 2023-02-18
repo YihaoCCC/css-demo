@@ -1,8 +1,8 @@
 <template>
     <div class="header">
         <div class="place">        
-            <a target="_blank" :class="showChina ? 'active' : '' " href="http://121.4.104.155/#/">中国站</a>
-            <a target="_blank" :class="!showChina ? 'active' : '' " href="https://css-demo-yihaoccc.vercel.app/">mei国站</a>            
+            <a target="_blank" :class="showChina ? 'active' : '' " href="http://www.chenyh.vip">中国站</a>
+            <a target="_blank" :class="!showChina ? 'active' : '' " href="https://css-demo-yihaoccc.vercel.app/">Vercel部署</a>            
         </div>
         <div class="theme headerItem">
             <div class="toggleWrapper" id="step3">
@@ -75,7 +75,7 @@ const changeTheme = () => {
 const showChina = ref(false)
 onMounted(() => {
     const url = window.location.href
-    if(url.indexOf('http://121.4.104.155/#/')!== -1 || url.indexOf('localhost'))  {
+    if(url.indexOf('chenyh.vip')!== -1 || url.indexOf('localhost'))  {
         console.log("中国站");
         showChina.value = true
     } else {
@@ -108,7 +108,7 @@ const GoYuQue = () => {
     align-items: center;
     justify-content: flex-end;
     .place {
-        width: 120px;
+        width: 140px;
         display: flex;
         justify-content: space-between;
         a {
