@@ -62,7 +62,7 @@
             })
             this.classList.add('active')
             console.log(this.classList);
-        }
+        } 
         liList.forEach((item) => {
             item.addEventListener('click', setActive1)
         })
