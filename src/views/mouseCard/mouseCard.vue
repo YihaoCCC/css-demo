@@ -16,7 +16,10 @@
             </div>
             <div class="imgBox type4">
                 <img src="../../img/风景图.jpg" alt="">
-                <p>我本来打算告诉你在你不在我身边的这段时间里，我遇到的所有糟糕事，但最后我只想告诉你，我很想你。</p>
+                <div class="des">
+                    我本来打算告诉你在你不在我身边的这段时间里，我遇到的所有糟糕事，但最后我只想告诉你，我很想你。
+                    <button>了解更多</button>
+                </div>
             </div>
             <div class="imgBox type5">
                 <img src="../../img/风景图.jpg" alt="">
