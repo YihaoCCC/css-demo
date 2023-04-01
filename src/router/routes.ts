@@ -2,15 +2,20 @@ import { RouteRecordRaw } from 'vue-router'
 
 export const routes:RouteRecordRaw[] = [
     {
-        path : '/',
+        path: '/',
+        name: 'profile',
+        component: () => import('../views/profile/profile.vue')
+    },
+    {
+        path : '/UIwelcome',
         name: 'doorIndex',
         component: () => import('../views/doorIndex/index.vue')
     },
     {
-        path: '/home',
-        name: 'home',
+        path: '/UI',
+        name: 'UIHome',
         component: () => import('../views/home/home.vue'),
-        redirect: '/home/dashbord',
+        redirect: '/UI/dashbord',
         children: [
             {
                 path: 'dashbord',
@@ -25,7 +30,7 @@ export const routes:RouteRecordRaw[] = [
             {
                 path :'loading',
                 name: 'loading',
-                redirect: '/home/loading/loading1',
+                redirect: '/UI/loading/loading1',
                 children: [
                     {
                         path: "loading1",
@@ -47,7 +52,7 @@ export const routes:RouteRecordRaw[] = [
             {
                 path: 'input',
                 name: 'input',
-                redirect: '/home/input/input1',
+                redirect: '/UI/input/input1',
                 children: [
                     {
                         path: 'input1',
@@ -64,7 +69,7 @@ export const routes:RouteRecordRaw[] = [
             {
                 path: 'list',
                 name: 'list',
-                redirect: '/home/list/userlist',
+                redirect: '/UI/list/userlist',
                 children: [
                     {
                         path: 'userlist',
@@ -82,7 +87,7 @@ export const routes:RouteRecordRaw[] = [
             {
                 path: 'intersting',
                 name: 'intersting',
-                redirect: '/home/intersting/testpeople',
+                redirect: '/UI/intersting/testpeople',
                 children: [
                     {
                         path: 'testpeople',
@@ -114,7 +119,7 @@ export const routes:RouteRecordRaw[] = [
             {
                 path: 'navbar',
                 name: 'navbar',
-                redirect: '/home/navbar/nav-one',
+                redirect: '/UI/navbar/nav-one',
                 children: [
                     {
                         path: 'nav-one',
@@ -131,7 +136,7 @@ export const routes:RouteRecordRaw[] = [
             {
                 path: 'function',
                 name: 'function',
-                redirect: '/home/function/vertifyCode',
+                redirect: '/UI/function/vertifyCode',
                 children: [
                     {
                         path: 'vertifyCode',

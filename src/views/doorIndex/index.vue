@@ -58,7 +58,7 @@
     const goHome = () => {
         shaking.value = false
         if(code.value === '1234') {
-            router.push('/home')
+            router.push('/UI')
         } else{ 
             shaking.value = true
             setTimeout(() => {
