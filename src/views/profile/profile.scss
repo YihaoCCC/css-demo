@@ -1,4 +1,17 @@
 .profile {
     color: var(--theme-font-deeper);
     font-family: 'Poppins', 'sans-serif';
+    scroll-snap-type: y mandatory;
+    .slider {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        scroll-snap-align: start;
+        &:first-child {
+            background: linear-gradient(115.75232956599712deg, rgba(235, 167, 189,1) 5.23042380495524%,rgba(153, 233, 255,1) 97.28277142234296%);
+        }
+    }
 }

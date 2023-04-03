@@ -1,7 +1,14 @@
 <template>
     <div class="profile">
-        this is the  new profile index to welcome new webste
-        <button @click="goUIHome">goUIHome</button>
+        <div class="slider">
+            <img src="../../assets/undraw_dream.svg" alt="">
+            <div class="info">
+                <h2>This is the  new profile index to welcome new webste</h2>
+                <button @click="goUIHome">goUIHome</button>
+            </div>
+        </div>
+        <div class="slider"></div>
+        <div class="slider"></div>
     </div>
 </template>
 <script setup lang="ts">
