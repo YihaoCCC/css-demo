@@ -45,6 +45,9 @@
                   </button>
             </div>
         </div>
+        <div class="law">
+            本站代码仅供学习使用！！！转载请注明出处！！！
+        </div>
     </div>
 </template>
 
