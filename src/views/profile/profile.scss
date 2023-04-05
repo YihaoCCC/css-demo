@@ -17,7 +17,6 @@
             width: 100%;
             height: 100vh;
             
-           
             &:first-child {
                 background: linear-gradient(115.98849645831115deg, rgba(250, 187, 208,1) 25.23901791754547%,rgba(175, 233, 249,1) 97.28277142234296%);
             }
@@ -27,7 +26,6 @@
             &:last-child {
                 background: linear-gradient(115.98849645831115deg, rgba(255, 226, 160,1) 5.23042380495524%,rgba(255, 115, 156,1) 97.28277142234296%);
             }
-    
         }
     }
     .content {
@@ -78,7 +76,7 @@
             height: 100%;
             .differentNav {
                 position: absolute;
-                top: 43%;
+                top: 45%;
                 animation: downChange .5s ease-in;
                 &.showChange {
                     animation: upChange .5s  ease-in;
@@ -111,7 +109,7 @@
                 animation: showChange .6s ease-in-out forwards;
                 font-size: 36px;
                 letter-spacing: 4px;
-                line-height: 36px;
+                line-height: 40px;
                 &.showChange {
                     animation: closeChange .6s ease-in-out;
                 }
@@ -151,3 +149,255 @@
     }
     
 }
+
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+//language
+a {
+    text-decoration: none;
+    
+}
+.language {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    img {
+        width: 60%;
+        flex: 1;
+        
+    }
+
+    .cta {
+        position: relative;
+        margin: auto;
+        padding: 12px 18px;
+        transition: all 0.2s ease;
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        
+        svg:last-child {
+            fill: #234567;
+        }
+        
+       }
+       
+       .cta:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 4px;
+            display: block;
+            border-radius: 50px;
+            background: #aed1e6;
+            width: 45px;
+            height: 45px;
+            transition: all 0.3s ease;
+        }
+       
+       .cta span {
+            position: relative;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #234567;
+       }
+       
+       .cta svg {
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: #234567;
+            stroke-width: 2;
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .cta:hover:before {
+            width: 100%;
+            background: #b1dae7;
+        }
+        
+        .cta:hover svg {
+            transform: translateX(0);
+        }
+        
+        .cta:active {
+            transform: scale(0.95);
+       }
+}
+
+// wechat
+.card {
+    max-width: 320px;
+    border-radius: 1rem;
+    background-color: rgb(173 101 122 / 68%);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+  }
+  
+  .infos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    grid-gap: 1rem;
+    gap: 1rem;
+  }
+  
+  .image {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+    }      
+  }
+  
+  .info {
+    height: 8rem;
+    width: 8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .name {
+    font-size: 1.25rem;
+    line-height: 1.15rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .function {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(210 216 226);;
+  }
+  
+  .stats {
+    
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4px;
+  }
+  
+  .state-value {
+    font-weight: 700;
+    color: rgb(118, 36, 194);
+  }
+  
+
+  
