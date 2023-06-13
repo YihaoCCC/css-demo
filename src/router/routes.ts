@@ -152,6 +152,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'pinia',
                         name: 'pinia',
                         component: () => import('../views/function/pinia/pinia.vue')
+                    },
+                    {
+                        path: 'directive',
+                        name: 'directive',
+                        component: () => import('../views/function/directive/directive.vue')
                     }
                 ]
             }

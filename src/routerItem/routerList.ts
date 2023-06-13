@@ -117,6 +117,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/UI/function/pinia',
                 name: 'pinia'
+            },
+            {
+                path: '/UI/function/directive',
+                name: 'directive'
             }
         ]
     },
