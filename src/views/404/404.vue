@@ -19,7 +19,7 @@
     import { useRouter } from 'vue-router';
     const router = useRouter()
     const goDashbord = () => {
-        router.push('/home')
+        router.push('/UI')
     }
 </script>
 
