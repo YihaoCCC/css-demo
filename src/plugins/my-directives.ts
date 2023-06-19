@@ -64,18 +64,16 @@ const ob = new IntersectionObserver((entries) => {
 // 只能实现视口的动画，需要增加一个坐标dom做定位
 function isBelowViewport (el:HTMLElement) {
     const rect = el.getBoundingClientRect()
+    console.log(rect.top);
     return rect.top > window.innerHeight
 }
 
-function isBelowViewDom (el:HTMLElement) {
+// 相对于某一个dom
+function isBelowViewDom (elParent:HTMLElement,el:HTMLElement) {
     const rect = el.getBoundingClientRect()
-}
-
-const sliderParent = {
-    mounted(el:HTMLElement) {
-        animateParent = el
-        console.log(animateParent);
-    },
+    console.log(rect);
+    console.log(elParent);
+    return rect.top > elParent.getBoundingClientRect().top
 }
 
 
@@ -83,24 +81,28 @@ const sliderParent = {
 const slide = {
     mounted(el:HTMLElement, binding: any) {
         // 在视口之下 不需要进行创建动画
-        if(!isBelowViewport(el)) return
-        console.log('播放了动画');
-        const animation = el.animate([
-            {
-                transform: `translateX(${DISTANCE}px)`,
-                opacity: 0.3
-            },
-            {
-                transform: `translateY(0)`,
-                opacity: 1
-            }
-        ], {
-            duration: binding.value || ANIMATETIME,
-            easing: 'ease-in-out'
-        })
-        animation.pause()
-        animationMap.set(el, animation)
-        ob.observe(el)
+        console.log(el.children);
+        for(let item of Array.from(el.children)) {
+            if(!isBelowViewDom(el, item as HTMLElement)) return
+            console.log('播放了动画');
+            const animation = item.animate([
+                {
+                    transform: `translateX(${DISTANCE}px)`,
+                    opacity: 0.3
+                },
+                {
+                    transform: `translateY(0)`,
+                    opacity: 1
+                }
+            ], {
+                duration: binding.value || ANIMATETIME,
+                easing: 'ease-in-out'
+            })
+            animation.pause()
+            animationMap.set(item, animation)
+            ob.observe(item)
+        }
+        
     },
     unmounted(el: HTMLElement) {
         ob.unobserve(el) 
@@ -109,8 +111,7 @@ const slide = {
 
 const arr: any = {
     'cyh-number': number,
-    'cyh-silder-parent': sliderParent,
-    'cyh-silder-in': slide
+    'cyh-silder': slide
 }
 
 const myDirectives = (app: App) => {

@@ -10,8 +10,8 @@
         </div>
         <div class="card">
             <h3>v-cyh-silde-in</h3>
-            <div class="detail" v-cyh-silder-parent>
-                <div class="slider-in" v-for="item in 20" v-cyh-silder-in> {{ item }}</div>
+            <div class="detail" v-cyh-silder>
+                <div class="slider-in" v-for="item in 20"> {{ item }}</div>
             </div>
         </div>
     </div>
