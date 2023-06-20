@@ -49,7 +49,6 @@ const DISTANCE = 200
 const ANIMATETIME = 1000
 const animationMap = new WeakMap()
 
-let animateParent:any = ''
 const ob = new IntersectionObserver((entries) => {
     console.log(entries);
     for(let item of entries) {
@@ -75,8 +74,6 @@ function isBelowViewDom (elParent:HTMLElement,el:HTMLElement) {
     console.log(elParent);
     return rect.top > elParent.getBoundingClientRect().top
 }
-
-
 
 const slide = {
     mounted(el:HTMLElement, binding: any) {
