@@ -9,7 +9,6 @@
             slider-text="向右滑动->"
             :interval="10"
             :accuracy="10"
-            :imgs="codeImg"
             @again="onAgain"
             @success="onSuccess"
             @fail="onFail"
