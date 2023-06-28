@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref, provide } from 'vue';
+import { ref, provide, nextTick } from 'vue';
 import Layout from '../../components/Layout.vue'
 const fresh = ref(true)
 const reload = () => {
   console.log('asdfasdfa')
   fresh.value = false
-  setTimeout( ()=> {
+  nextTick(() => {
     fresh.value = true
-  },0)
+  })
 }
 provide('reload', reload)
 </script>

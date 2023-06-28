@@ -45,13 +45,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, inject } from 'vue'
+import { ref, onMounted, inject, getCurrentInstance } from 'vue'
 import { useRouter } from 'vue-router'
 
+const update = getCurrentInstance()
 const num = ref(3)
 const isClickArr = ref()
 const notArr = ref()
-
+const reload = inject('reload')
 const router = useRouter()
 
 function clickFunction() {
@@ -69,6 +70,9 @@ function clickFunction() {
                 item.classList.add('alwaysNoClick')
             })
         }, 2000);
+        document.querySelectorAll('.card').forEach((item) => {
+            item.removeEventListener('click', clickFunction)
+        })
     } else {
         this.classList.remove('noClick')
         this.classList.add('clicked')
@@ -79,8 +83,9 @@ function clickFunction() {
 }
 
 onMounted(() => {
-    console.log('shuaxinle ')
     document.querySelectorAll('.card').forEach((item) => {
+        item.classList.remove('clicked', 'alwaysNoClick')
+        item.classList.add('noClick')
         item.addEventListener('click', clickFunction)
     })
     const arr = [
@@ -99,7 +104,10 @@ onMounted(() => {
 })
 
 
-const refresh = inject('reload')
+const refresh = () => {
+    // update.proxy.$forceUpdate()
+    reload()
+}
 </script>
 
 
