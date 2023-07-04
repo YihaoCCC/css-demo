@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="cyh-directive">
-                <button @click="() => warterMark">关闭水印</button>
+                <button @click="(e:Event) => warterMark(e)">关闭水印</button>
             </div>
         </div>
         <div class="card">
@@ -43,7 +43,7 @@ onDeactivated(() => {
     watermark.del()
 })
 
-const warterMark = (e:HTMLElement) => {
+const warterMark = (e:Event) => {
     openWarterMark.value ? watermark.set('cyh-dynamic-watermark') : watermark.del()
     openWarterMark.value = !openWarterMark.value
     openWarterMark.value ?  e.target.innerText = '打开水印' :  e.target.innerText = '关闭水印'
