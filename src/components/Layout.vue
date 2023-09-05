@@ -73,7 +73,11 @@ const showModal = () => {
   padding: 0px 0px 0 10px;
   box-sizing: border-box;
   background-color: transparent;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .leftHeader {
     display: flex;

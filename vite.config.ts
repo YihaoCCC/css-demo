@@ -10,7 +10,7 @@ export default defineConfig({
     host: '0.0.0.0',
     proxy: {
       '/api': {
-        target: 'https://www.fastmock.site/mock/035f131c0d869ce8bd6939a28fb3e126/newYear',
+        target: 'https://www.fastmock.site/mock',
         changeOrigin: true,
         rewrite: (path) => {
           console.log(path);

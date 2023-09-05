@@ -83,6 +83,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/UI/intersting/draw',
                 name: '拼多多'
+            },
+            {
+                path: '/UI/intersting/redbook',
+                name: '小红书'
             }
         ]
     },

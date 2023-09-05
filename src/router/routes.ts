@@ -113,6 +113,11 @@ export const routes:RouteRecordRaw[] = [
                         path: 'draw',
                         name: 'draw',
                         component: () => import('../views/interested/draw/draw.vue')
+                    },
+                    {
+                        path: 'redbook',
+                        name: 'redbook',
+                        component: () => import('../views/interested/redbook/index.vue')
                     }
                 ]
             },

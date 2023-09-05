@@ -25,14 +25,14 @@
         </div>
         <div class="secondFloor" :class="showSecondFloor ?'show' : '' ">
             <div class="secondChangePlan">
-                <input  v-model="code" class="input" maxlength="6" >
+                <input  v-model="code" class="input" maxlength="6" id="code">
                 <div class="number" :class="shaking ? 'shaking':''" v-for="item in 4" :key="item">
                     {{code[item-1]? code[item-1] :""}}
                 </div>  
             </div>
             <p>{{shaking ? "PIN: 1234" : "随便输几个数字试试"}}</p>
             <div>
-                <button class="my-fly-button" @click="goHome">
+                <button class="my-fly-button" @click="goHome" @keydown.enter="goHome">
                     <div class="svg-wrapper-1">
                       <div class="svg-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -53,7 +53,7 @@
 
 <script lang="ts" setup>
     import { useRouter } from "vue-router";
-    import { ref, onMounted, onUnmounted } from "vue";
+    import { ref, onMounted, onUnmounted, nextTick } from "vue";
     const router = useRouter()
     const code = ref('')
     const showSecondFloor = ref(false)
@@ -72,6 +72,9 @@
 
     const addClass = () => {
         showSecondFloor.value = true
+        nextTick(() => {
+            document.getElementById('code')?.focus()
+        })
     }
     const body = window.document.getElementsByTagName('body')[0]
     onMounted(() => {
