@@ -129,6 +129,17 @@ export const routeList:Array<myRouterItem> = [
         ]
     },
     {
+        path: '/scroll',
+        name: '滚动Scroll',
+        icon: 'Sort',
+        children: [
+            {
+                path: '/scroll/text',
+                name: '滚动文字'
+            }
+        ]
+    },
+    {
         path: '/UI/404page',
         icon: 'CircleCloseFilled',
         name: '404页面'

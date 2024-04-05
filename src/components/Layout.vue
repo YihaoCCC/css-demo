@@ -48,7 +48,7 @@ const router = useRouter()
 const useModal = useModalStore()
 const useCodeButton = useCodeButtonStore()
 const goDoor = () => {
-  router.push('/')
+  router.push('/profile')
 }
 const showModal = () => {
   useModal.openModal()

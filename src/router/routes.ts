@@ -1,10 +1,19 @@
 import { RouteRecordRaw } from 'vue-router'
 
 export const routes:RouteRecordRaw[] = [
+    // {
+    //     path: '/',
+    //     name: 'profile',
+    //     component: () => import('../views/profile/profile.vue')
+    // },
     {
-        path: '/',
+        path: '/profile',
         name: 'profile',
         component: () => import('../views/profile/profile.vue')
+    },
+    {
+        path: '/',
+        redirect: '/UI',
     },
     {
         path : '/UIwelcome',
@@ -162,6 +171,18 @@ export const routes:RouteRecordRaw[] = [
                         path: 'directive',
                         name: 'directive',
                         component: () => import('../views/function/directive/directive.vue')
+                    }
+                ]
+            },
+            {
+                path: '/scroll',
+                name: 'Scroll',
+                redirect: '/scroll/text',
+                children: [
+                    {
+                        path: '/scroll/text',
+                        name: 'ScrollText',
+                        component: () => import('../views/scroll/text/text.vue')
                     }
                 ]
             }
