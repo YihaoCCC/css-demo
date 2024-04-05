@@ -1,0 +1,32 @@
+.baseBox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .item {
+        .model {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent;
+            display: none;
+        }
+        width: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+        img {
+            display:block;
+            transition: all .3s ease-in;
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+}

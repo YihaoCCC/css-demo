@@ -83,6 +83,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/UI/intersting/draw',
                 name: '拼多多'
+            },
+            {
+                path: '/UI/intersting/redbook',
+                name: '小红书'
             }
         ]
     },
@@ -121,6 +125,17 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/UI/function/directive',
                 name: 'directive'
+            }
+        ]
+    },
+    {
+        path: '/scroll',
+        name: '滚动Scroll',
+        icon: 'Sort',
+        children: [
+            {
+                path: '/scroll/text',
+                name: '滚动文字'
             }
         ]
     },

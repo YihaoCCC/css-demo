@@ -1,0 +1,48 @@
+.scroll_text {
+    color: #444;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left_content {
+            padding: 0 200px;
+            box-sizing: border-box;
+            height: 80vh;
+            overflow: auto;
+            font-size: 6em;
+            h1 {
+                padding: 100px 0;
+                box-sizing: border-box;
+                position: relative;
+                line-height: 1em;
+                &::before {
+                    content: attr(data-text);
+                    width: 0%;
+                    line-height: 1em;
+                    color: #fff;
+                    overflow: hidden;
+                    transition: all .3s ease-in-out;
+                    position: absolute;
+                }
+                &.active::before {
+                    width: 100%;
+                }
+            }
+        }
+        .right_content {
+            .example {
+                font-size: 3em;
+                position: relative;
+                line-height: 3em;
+                padding-left: 200px;
+                &::before {
+                    content: attr(data-text);
+                    width: 20%;
+                    color: #fff;
+                    overflow: hidden;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

@@ -221,19 +221,19 @@
         opacity: 0;
     }
     50% {
-        transform: translateY(-60vh);
+        transform: translateY(-20vh);
         opacity: 0.5;
     }
     60% {
-        transform: translateY(-70vh);
+        transform: translateY(-30vh);
         opacity: 0.75;
     }
     70% {
-        transform: translateY(-55vh);
+        transform: translateY(-10vh);
         opacity: 0.75;
     }
     100% {
-        transform: translateY(-100vh);
+        transform: translateY(-10vh);
         opacity: 1;
     }
 }

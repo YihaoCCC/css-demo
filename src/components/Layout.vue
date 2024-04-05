@@ -48,7 +48,7 @@ const router = useRouter()
 const useModal = useModalStore()
 const useCodeButton = useCodeButtonStore()
 const goDoor = () => {
-  router.push('/')
+  router.push('/profile')
 }
 const showModal = () => {
   useModal.openModal()
@@ -73,7 +73,11 @@ const showModal = () => {
   padding: 0px 0px 0 10px;
   box-sizing: border-box;
   background-color: transparent;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .leftHeader {
     display: flex;
