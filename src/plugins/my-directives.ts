@@ -2,7 +2,7 @@ import { App, VNode } from "vue"
 
 const number = {
     mounted(el: HTMLElement, binding: any, vnode: VNode) {
-        console.log(binding.value);
+        // console.log(binding.value);
         // 每一次更新也会执行created中的代码，所以两者不能执行同一套逻辑
         if (binding.value) {
             let finalNum = binding.value.number || binding.value;
@@ -50,7 +50,7 @@ const ANIMATETIME = 1000
 const animationMap = new WeakMap()
 
 const ob = new IntersectionObserver((entries) => {
-    console.log(entries);
+    // console.log(entries);
     for(let item of entries) {
         if(item.isIntersecting) {
             const animation = animationMap.get(item.target)
@@ -70,18 +70,18 @@ function isBelowViewport (el:HTMLElement) {
 // 相对于某一个dom
 function isBelowViewDom (elParent:HTMLElement,el:HTMLElement) {
     const rect = el.getBoundingClientRect()
-    console.log(rect);
-    console.log(elParent);
+    // console.log(rect);
+    // console.log(elParent);
     return rect.top > elParent.getBoundingClientRect().top
 }
 
 const slide = {
     mounted(el:HTMLElement, binding: any) {
         // 在视口之下 不需要进行创建动画
-        console.log(el.children);
+        // console.log(el.children);
         for(let item of Array.from(el.children)) {
             if(!isBelowViewDom(el, item as HTMLElement)) return
-            console.log('播放了动画');
+            // console.log('播放了动画');
             const animation = item.animate([
                 {
                     transform: `translateX(${DISTANCE}px)`,
