@@ -136,6 +136,10 @@ export const routeList:Array<myRouterItem> = [
             {
                 path: '/scroll/text',
                 name: '滚动文字'
+            },
+            {
+                path: '/scroll/scrollIn',
+                name: '滚动进入'
             }
         ]
     },

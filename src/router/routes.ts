@@ -183,7 +183,13 @@ export const routes:RouteRecordRaw[] = [
                         path: '/scroll/text',
                         name: 'ScrollText',
                         component: () => import('../views/scroll/text/text.vue')
-                    }
+                    },
+                    
+                    {
+                        path: '/scroll/scrollIn',
+                        name: 'ScrollIn',
+                        component: () => import('../views/scroll/scrollIn.vue')
+                    },
                 ]
             }
         ]
